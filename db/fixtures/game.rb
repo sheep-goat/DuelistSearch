@@ -1,0 +1,15 @@
+Game.seed(:id,
+          {:id => 1, :title => '遊戯王'},
+          {:id => 2, :title => 'デュエルマスターズ'},
+          {:id => 3, :title => 'MTG'},
+          {:id => 4, :title => 'Z/X'},
+          {:id => 5, :title => 'ヴァンガード'},
+          {:id => 6, :title => 'バディファイト'},
+          {:id => 7, :title => 'ヴァイスシュヴァルツ'},
+          {:id => 8, :title => 'WIXOSS'},
+          {:id => 9, :title => 'バトルスピリッツ'},
+          {:id => 10, :title => 'ポケモンカード'},
+          {:id => 11, :title => 'リセ'},
+          {:id => 12, :title => 'Chaos'},
+          {:id => 13, :title => 'その他'}
+)
