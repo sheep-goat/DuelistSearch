@@ -1,0 +1,9 @@
+<h1>LandingPages#home</h1>
+<p>Find me in app/views/landing_pages/home.html.erb</p>
+<% if logged_in? %>
+  <%= @user.nickname %>
+  <%= link_to 'mypage', user_show_path(@user.username) %>
+  <%= link_to 'logout', logout_path, method: :delete %>
+<% else %>
+  <%= link_to 'login', login_path, method: :get %>
+<% end %>
