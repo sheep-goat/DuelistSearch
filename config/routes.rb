@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'posts/new'
   root 'landing_pages#home'
   get 'signup', to: 'users#new'
   post 'signup', to: 'users#create'
@@ -9,5 +8,8 @@ Rails.application.routes.draw do
   get '/:username', to: 'users#show', as: 'user_show'
   get '/:username/edit', to: 'users#edit', as: 'user_edit'
   patch '/:username/edit', to: 'users#update'
+
+  get 'posts/new'
+  post 'posts/new', to: 'posts#create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

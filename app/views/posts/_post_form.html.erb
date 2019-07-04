@@ -1,0 +1,40 @@
+<%= form_with model: @post, url: {controller: 'posts', action: action}, local: true do |form| %>
+  <div class="title">
+    <%= form.label :title, "タイトル" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="game">
+    <%= form.label :game_id, "ゲーム" %>
+    <%= form.collection_select :game_id, Game.all, :id, :title, :prompt => true %>
+  </div>
+
+  <div class="schedule_date">
+    <%= form.label :schedule_date, "日時" %>
+    <%= form.date_field :schedule_date %>
+  </div>
+
+  <div class="prefecture">
+    <%= form.label :prefecture_id, "場所" %>
+    <%= form.collection_select :prefecture_id, Prefecture.all, :id, :name, :prompt => true %>
+  </div>
+
+  <div class="location">
+    <%= form.label :location, "会場" %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div class="max_participant">
+    <%= form.label :max_participant, "定員" %>
+    <%= form.text_field :max_participant %>
+  </div>
+
+  <div class="desc">
+    <%= form.label :desc, "説明" %>
+    <%= form.text_area :desc %>
+  </div>
+
+  <div class="buttom">
+    <%= form.submit %>
+  </div>
+<% end %>
