@@ -10,12 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_03_101511) do
+ActiveRecord::Schema.define(version: 2019_07_04_073228) do
 
   create_table "games", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "title"
+    t.integer "game_id", null: false
+    t.datetime "schedule_date"
+    t.integer "prefecture_id"
+    t.string "location"
+    t.integer "max_participant"
+    t.text "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_posts_on_game_id"
+    t.index ["prefecture_id"], name: "index_posts_on_prefecture_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "prefectures", force: :cascade do |t|
