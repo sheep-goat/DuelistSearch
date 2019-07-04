@@ -11,5 +11,6 @@ Rails.application.routes.draw do
 
   get 'posts/new'
   post 'posts/new', to: 'posts#create'
+  get '/:username/posts/:id', to: 'posts#show', as: 'post_show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
