@@ -1,6 +1,10 @@
 class User < ApplicationRecord
   has_secure_password validations: true
 
+  has_many :posts
+  has_many :favorites
+  has_many :fav_posts, through: :favorites, source: :post
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/
   VALID_USERNAME_REGEX = /\A[a-zA-Z_][a-zA-Z0-9_]+\z/
 
