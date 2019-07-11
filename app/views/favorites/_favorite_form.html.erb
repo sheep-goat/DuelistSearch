@@ -1,11 +1,7 @@
 <div class="fav-link">
   <% if current_user.favorites.find_by(post_id: post.id) %>
-    <%= link_to unfavorite_path(current_user.username, post.id), method: :delete do %>
-      <div class="unfav-btn">UNFAVORITE</div>
-    <% end %>
+    <%= link_to 'UNFAVORITE', unfavorite_path(current_user.username, post.id), method: :delete %>
   <% else %>
-    <%= link_to favorite_path(current_user.username,post.id), method: :post do %>
-      <div class="fav-btn">FAVORITE</div>
-    <% end %>
+    <%= link_to 'FAVORITE', favorite_path(current_user.username,post.id), method: :post %>
   <% end %>
 </div>
