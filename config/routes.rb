@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   post 'posts/new', to: 'posts#create'
   get '/:username/posts/:id', to: 'posts#show', as: 'post_show'
   post '/:username/posts/:id', to: 'favorites#create', as: 'favorite'
+  delete '/:username/posts/:id', to: 'favorites#destroy', as: 'unfavorite'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
