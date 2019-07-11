@@ -3,3 +3,4 @@
 <%= @post.title %>
 <%= @post.user.username %>
 <%= @post.game.title %>
+<%= render partial: 'favorites/favorite_form', :locals => { post: @post } %>

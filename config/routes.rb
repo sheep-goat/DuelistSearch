@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'favorites/create'
   root 'landing_pages#home'
   get 'signup', to: 'users#new'
   post 'signup', to: 'users#create'
@@ -13,5 +12,6 @@ Rails.application.routes.draw do
   get 'posts/new'
   post 'posts/new', to: 'posts#create'
   get '/:username/posts/:id', to: 'posts#show', as: 'post_show'
+  post '/:username/posts/:id', to: 'favorites#create', as: 'favorite'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
