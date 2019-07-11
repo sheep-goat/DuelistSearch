@@ -15,6 +15,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @fav_users = Favorite.where(post_id: params[:id]).count
   end
 
   private

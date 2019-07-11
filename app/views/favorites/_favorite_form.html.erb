@@ -4,4 +4,8 @@
   <% else %>
     <%= link_to 'FAVORITE', favorite_path(current_user.username,post.id), method: :post %>
   <% end %>
+  <div class="total-favs">
+    <span class="favs-count"><%= @fav_users %></span>
+    <span class="favs-unit">件のおきにいり</span>
+  </div>
 </div>
