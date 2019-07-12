@@ -4,6 +4,6 @@ FactoryBot.define do
     sequence(:nickname) { |n| "TEST_NICKNAME#{n}" }
     sequence(:email) { |n| "TEST#{n}@example.com" }
     sequence(:password) { |n| "TEST_PASS#{n}" }
-    sequence(:password_comfirmation) { |n| "TEST_PASS#{n}" }
+    sequence(:password_confirmation) { |n| "TEST_PASS#{n}" }
   end
 end
