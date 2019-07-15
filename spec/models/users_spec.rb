@@ -47,4 +47,9 @@ RSpec.describe User, type: :model do
     @user.username = 'test_test_test_test_t'
     expect(@user.valid?).to be_falsey
   end
+
+  it 'is invalid when nickname is blank' do
+    @user.nickname = ''
+    expect(@user.valid?).to be_falsey
+  end
 end
