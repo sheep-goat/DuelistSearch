@@ -18,4 +18,13 @@ RSpec.describe User, type: :model do
     @user.username = 'test-test'
     expect(@user.valid?).to be_falsey
   end
+
+  it 'is invalid when the username is duplicated' do
+    dup_username = @user.username
+    @user.save
+
+    @user = build(:user)
+    @user.username = dup_username
+    expect(@user.valid?).to be_falsey
+  end
 end
