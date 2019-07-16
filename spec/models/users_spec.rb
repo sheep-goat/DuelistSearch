@@ -86,4 +86,10 @@ RSpec.describe User, type: :model do
     @user.email = dup_email
     expect(@user.valid?).to be_falsey
   end
+
+  it 'is invalid when username is less than 8 characters' do
+    @user.password = 'UPHgkek'
+    @user.password_confirmation = 'UPHgkek'
+    expect(@user.valid?).to be_falsey
+  end
 end
