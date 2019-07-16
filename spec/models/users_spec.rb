@@ -62,4 +62,19 @@ RSpec.describe User, type: :model do
     @user.nickname = '123456789012345678901234567890123456789012345678901'
     expect(@user.valid?).to be_falsey
   end
+
+  it 'is invalid when email does not contain "@" ' do
+    @user.email = 'test'
+    expect(@user.valid?).to be_falsey
+  end
+
+  it 'is invalid when email "@" and subsequent ones are not entered' do
+    @user.email = 'test@'
+    expect(@user.valid?).to be_falsey
+  end
+
+  it 'is invalid when email "@" and prior ones are not entered' do
+    @user.email = '@example.com'
+    expect(@user.valid?).to be_falsey
+  end
 end
