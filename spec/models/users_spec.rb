@@ -52,4 +52,9 @@ RSpec.describe User, type: :model do
     @user.nickname = ''
     expect(@user.valid?).to be_falsey
   end
+
+  it 'is valid when nickname is in Japanese' do
+    @user.nickname = 'テストユーザ'
+    expect(@user.valid?).to be_truthy
+  end
 end
