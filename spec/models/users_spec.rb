@@ -92,4 +92,10 @@ RSpec.describe User, type: :model do
     @user.password_confirmation = 'UPHgkek'
     expect(@user.valid?).to be_falsey
   end
+
+  it 'is invalid when password is different from password_confirmation' do
+    @user.password = 'MFdgeW99xKtC'
+    @user.password_confirmation = 'U5nQYGwcayXPG'
+    expect(@user.valid?).to be_falsey
+  end
 end
