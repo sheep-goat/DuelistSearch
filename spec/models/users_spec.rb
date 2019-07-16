@@ -77,4 +77,13 @@ RSpec.describe User, type: :model do
     @user.email = '@example.com'
     expect(@user.valid?).to be_falsey
   end
+
+  it 'is invalid when the email is duplicated' do
+    dup_email = @user.email
+    @user.save
+
+    @user = build(:user)
+    @user.email = dup_email
+    expect(@user.valid?).to be_falsey
+  end
 end
