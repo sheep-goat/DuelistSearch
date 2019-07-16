@@ -57,4 +57,9 @@ RSpec.describe User, type: :model do
     @user.nickname = 'テストユーザ'
     expect(@user.valid?).to be_truthy
   end
+
+  it 'is invalid when nickname is more than 51 characters' do
+    @user.nickname = '123456789012345678901234567890123456789012345678901'
+    expect(@user.valid?).to be_falsey
+  end
 end

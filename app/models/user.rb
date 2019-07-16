@@ -12,6 +12,7 @@ class User < ApplicationRecord
   validates :username, length: { minimum: 3, maximum: 20 }
   validates :username, format: { with: VALID_USERNAME_REGEX }
   validates :nickname, presence: true
+  validates :nickname, length: { minimum: 1, maximum: 50 }
   validates :email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
   validates :password_digest, presence: true
 end
