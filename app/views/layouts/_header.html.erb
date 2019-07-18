@@ -1,0 +1,17 @@
+<header>
+  <div id="gnav">
+    <ul id="gnav-menu">
+      <% if logged_in? %>
+        <li class="item" id="post-link">募集する</li>
+        <li class="item" id="search-link">さがす</li>
+        <li class="item" id="mypage-link"><%= link_to 'マイページ', user_show_path(current_user.username) %></li>
+        <li class="item" id="setting-link"><%= link_to '設定', user_edit_path(current_user.username) %></li>
+        <li class="item" id="logout-link"><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+      <% else %>
+        <li class="item" id="search-link">さがす</li>
+        <li class="item" id="login-link"><%= link_to 'ログイン', login_path %></li>
+        <li class="item" id="signup-link"><%= link_to '新規登録', signup_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</header>
