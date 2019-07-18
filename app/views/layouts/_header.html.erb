@@ -2,7 +2,7 @@
   <div id="gnav">
     <ul id="gnav-menu">
       <% if logged_in? %>
-        <li class="item" id="post-link">募集する</li>
+        <li class="item" id="post-link"><%= link_to '募集する', posts_new_path %></li>
         <li class="item" id="search-link">さがす</li>
         <li class="item" id="mypage-link"><%= link_to 'マイページ', user_show_path(current_user.username) %></li>
         <li class="item" id="setting-link"><%= link_to '設定', user_edit_path(current_user.username) %></li>
