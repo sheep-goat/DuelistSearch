@@ -1,17 +1,46 @@
 <header>
-  <div id="gnav">
+  <h1 class="site-logo"></h1>
+  <nav id="gnav">
     <ul id="gnav-menu">
       <% if logged_in? %>
-        <li class="item" id="post-link"><%= link_to '募集する', posts_new_path %></li>
-        <li class="item" id="search-link">さがす</li>
-        <li class="item" id="mypage-link"><%= link_to 'マイページ', user_show_path(current_user.username) %></li>
-        <li class="item" id="setting-link"><%= link_to '設定', user_edit_path(current_user.username) %></li>
-        <li class="item" id="logout-link"><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+        <li class="item" id="post-link">
+          <%= link_to posts_new_path do %>
+            <i class="fas fa-bullhorn"></i>
+            <span>募集</span>
+          <% end %>
+        </li>
+        <li class="item" id="search-link">
+          <%= link_to do %>
+            <i class="fas fa-search"></i>
+            <span>さがす</span>
+          <% end %>
+        </li>
+        <li class="item" id="logout-link">
+          <%= link_to logout_path, method: :delete do %>
+            <i class="fas fa-sign-out-alt"></i>
+            <span>ログアウト</span>
+          <% end %>
+        </li>
       <% else %>
-        <li class="item" id="search-link">さがす</li>
-        <li class="item" id="login-link"><%= link_to 'ログイン', login_path %></li>
-        <li class="item" id="signup-link"><%= link_to '新規登録', signup_path %></li>
+        <li class="item" id="search-link">
+          <%= link_to do %>
+            <i class="fas fa-search"></i>
+            <span>さがす</span>
+          <% end %>
+        </li>
+        <li class="item" id="login-link">
+          <%= link_to login_path do %>
+            <i class="fas fa-sign-in-alt"></i>
+            <span>ログイン</span>
+          <% end %>
+        </li>
+        <li class="item" id="signup-link">
+          <%= link_to signup_path do %>
+            <i class="fas fa-user-plus"></i>
+            <span>新規登録</span>
+          <% end %>
+        </li>
       <% end %>
     </ul>
-  </div>
+  </nav>
 </header>
