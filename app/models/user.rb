@@ -4,6 +4,7 @@ class User < ApplicationRecord
 
   has_many :posts
   has_many :favorites
+  has_many :comments
   has_many :fav_posts, through: :favorites, source: :post
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/

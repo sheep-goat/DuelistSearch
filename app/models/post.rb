@@ -3,6 +3,7 @@ class Post < ApplicationRecord
   belongs_to :game
   belongs_to :prefecture
   has_many :favorites, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   validates :user_id, presence: true
   validates :game_id, presence: true
