@@ -31,6 +31,9 @@ gem 'seed-fu'
 # Use ActiveStorage variant
 gem 'mini_magick', '~> 4.8'
 gem 'carrierwave'
+# Use jQuery for .coffee
+gem 'jquery-rails'
+gem 'jquery-turbolinks'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
