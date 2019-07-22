@@ -1,5 +1,5 @@
 <%= @user.nickname %>
-<%= link_to "Edit", user_edit_path(@user.username) %>
+<%= link_to "Edit", user_edit_path(@user.username), data: {"turbolinks" => false} %>
 <% if @post.empty? %>
   <span>Empty.</span>
 <% else %>
