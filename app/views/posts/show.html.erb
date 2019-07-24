@@ -4,9 +4,8 @@
 <%= render partial: 'favorites/favorite_form', :locals => { post: @post } %>
 <%= render partial: 'comments/comment_form', :locals => { post: @post } %>
 <% @comments.each do |comment| %>
-  <div>
+  <div class="comment">
     <%= link_to comment.user.username, user_show_path(comment.user.username) %>
     <%= comment.message %>
-    <hr>
   </div>
 <% end %>
