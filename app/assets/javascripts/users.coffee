@@ -6,7 +6,6 @@ $ ->
     file = e.target.files[0]
     reader = new FileReader
     $preview = $('#img_field')
-    debugger
     reader.onload = do (file) ->
       (e) ->
         $preview.empty()
