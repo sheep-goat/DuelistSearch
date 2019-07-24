@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'comments/new'
   root 'landing_pages#home'
   get 'signup', to: 'users#new'
   post 'signup', to: 'users#create'
@@ -15,5 +14,6 @@ Rails.application.routes.draw do
   get '/:username/posts/:id', to: 'posts#show', as: 'post_show'
   post '/:username/posts/:id', to: 'favorites#create', as: 'favorite'
   delete '/:username/posts/:id', to: 'favorites#destroy', as: 'unfavorite'
+  post '/:username/posts/:id/comment', to: 'comments#create', as: 'comment_create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
