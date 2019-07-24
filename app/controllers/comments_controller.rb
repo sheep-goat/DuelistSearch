@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_param)
     @comment.user = current_user
     @comment.post = Post.find(params[:id])
+    @comment.save
     redirect_back fallback_location: post_show_path(@comment.post.id, params[:id])
   end
 
