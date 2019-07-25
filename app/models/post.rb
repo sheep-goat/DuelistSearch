@@ -4,6 +4,8 @@ class Post < ApplicationRecord
   belongs_to :prefecture
   has_many :favorites, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :participators, dependent: :delete_all
+  has_many :users, through: :participators
 
   validates :user_id, presence: true
   validates :game_id, presence: true

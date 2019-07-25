@@ -6,6 +6,8 @@ class User < ApplicationRecord
   has_many :favorites
   has_many :comments
   has_many :fav_posts, through: :favorites, source: :post
+  has_many :participators
+  has_many :posts, through: :participators
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/
   VALID_USERNAME_REGEX = /\A[a-zA-Z_][a-zA-Z0-9_]+\z/
