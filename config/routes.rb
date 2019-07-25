@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   post '/:username/posts/:id/comment', to: 'comments#create', as: 'comment_create'
 
   post '/:username/posts/:id/join', to: 'participators#join', as: 'join'
+  delete '/:username/posts/:id/join', to: 'participators#leave', as: 'leave'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

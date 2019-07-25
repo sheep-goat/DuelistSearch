@@ -2,6 +2,7 @@
 <%= @post.user.username %>
 <%= @post.game.title %>
 <%= render partial: 'favorites/favorite_form', :locals => { post: @post } %>
+<%= render partial: 'participators/participator_form', :locals => { post: @post } %>
 <%= render partial: 'comments/comment_form', :locals => { post: @post } %>
 <% @comments.each do |comment| %>
   <div class="comment">
