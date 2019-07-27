@@ -25,17 +25,17 @@
   </div>
 
   <div class="user-icon">
-    <%= form.label :image, "アイコン" %>
+    <%= form.label :image_path, "アイコン" %>
     <div id="img_field" onClick="$('#select_file').click()" >
 
-      <% if @user.image.attached? %>
-        <%= image_tag @user.image %>
+      <% if @user.image_path.url.present? %>
+        <%= image_tag @user.image_path.url %>
       <% else %>
         <i class="fas fa-image"></i><i class="fas fa-file-upload add"></i>
       <% end %>
 
     </div>
-    <%= form.file_field :image, class: "image", style: "display:none;", id: "select_file" %>
+    <%= form.file_field :image_path, class: "image", style: "display:none;", id: "select_file" %>
   </div>
 
   <div class="buttom">

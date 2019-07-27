@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_secure_password validations: true
+  mount_uploader :image_path, UserImageUploader
 
   has_many :posts
   has_many :favorites
