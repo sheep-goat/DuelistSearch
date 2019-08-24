@@ -5,3 +5,6 @@
 <% else %>
   <%= link_to 'login', login_path, method: :get %>
 <% end %>
+<% @latest_posts.each do |post| %>
+  <%= link_to post.title, post_show_path(post.user.username, post.id), method: :get %>
+<% end %>

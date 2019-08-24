@@ -12,4 +12,8 @@ class Post < ApplicationRecord
   validates :title, presence: true, length: { minimum: 3, maximum: 50 }
   validates :schedule_date, presence: true
   validates :max_participant, numericality: { only_integer: true, greater_than: 0 }
+
+  def self.latest_record
+    Post.first(5)
+  end
 end
