@@ -21,6 +21,13 @@ class PostsController < ApplicationController
     @comment = Comment.new
   end
 
+  def search
+    query = request.query_parameters
+    unless query.empty?
+      @post = Post.where(prefecture_id: query[:prefecture_id])
+    end
+  end
+
   private
 
   def post_param

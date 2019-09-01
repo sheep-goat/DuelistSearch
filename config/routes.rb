@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get 'posts/new'
   post 'posts/new', to: 'posts#create'
+  get 'posts/search'
   get '/:username/posts/:id', to: 'posts#show', as: 'post_show'
   post '/:username/posts/:id', to: 'favorites#create', as: 'favorite'
   delete '/:username/posts/:id', to: 'favorites#destroy', as: 'unfavorite'
