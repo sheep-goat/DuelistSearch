@@ -7,7 +7,15 @@
 
 #search-area {
   width: 600px;
-  height: 600px;
+  height: 500px;
+  border: solid 3px #6091d3;
+  border-radius: 10px;
+  margin-top: 50px;
+  #area-map-title {
+    margin: 10px 20px;
+    font-size: 18px;
+  }
+
   .area-map {
     margin-left: 100px;
     height: 100%;
@@ -28,7 +36,7 @@
     position: absolute;
     text-align: center;
     width: 100px;
-    border: solid 3px #6091d3;
+    border: solid 2px #6091d3;
     border-radius: 10px;
     background-color: #FFFFFF;
   }
