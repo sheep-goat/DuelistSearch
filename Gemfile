@@ -28,6 +28,9 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'seed-fu'
 
+# Japanese localization
+gem 'rails-i18n', '~> 5.1'
+
 # Use ActiveStorage variant
 gem 'mini_magick', '~> 4.8'
 gem 'carrierwave'
