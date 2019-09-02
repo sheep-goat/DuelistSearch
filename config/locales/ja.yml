@@ -6,6 +6,12 @@ ja:
         restrict_dependent_destroy:
           has_one: "%{record}が存在しているので削除できません"
           has_many: "%{record}が存在しているので削除できません"
+  header:
+    create_post: "募集"
+    login: "ログイン"
+    logout: "ログアウト"
+    sighup: "新規登録"
+    search: "探す"
   search:
     area: "エリアから探す"
   date:
@@ -206,3 +212,13 @@ ja:
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後
+  regions:
+    hokkaido: "北海道"
+    tohoku: "東北"
+    kanto: "関東"
+    hokuriku: "北陸"
+    tokai: "東海・甲信越"
+    kansai: "関西"
+    chugoku: "中国"
+    shikoku: "四国"
+    kyushu: "九州・沖縄"

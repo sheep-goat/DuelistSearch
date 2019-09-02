@@ -6,38 +6,38 @@
         <li class="item" id="post-link">
           <%= link_to posts_new_path do %>
             <i class="fas fa-bullhorn"></i>
-            <span>募集</span>
+            <span><%= t('header.create_post') %></span>
           <% end %>
         </li>
         <li class="item" id="search-link">
           <%= link_to posts_search_path do %>
             <i class="fas fa-search"></i>
-            <span>さがす</span>
+            <span><%= t('header.search') %></span>
           <% end %>
         </li>
         <li class="item" id="logout-link">
           <%= link_to logout_path, method: :delete do %>
             <i class="fas fa-sign-out-alt"></i>
-            <span>ログアウト</span>
+            <span><%= t('header.logout') %></span>
           <% end %>
         </li>
       <% else %>
         <li class="item" id="search-link">
           <%= link_to posts_search_path do %>
             <i class="fas fa-search"></i>
-            <span>さがす</span>
+            <span><%= t('header.search') %></span>
           <% end %>
         </li>
         <li class="item" id="login-link">
           <%= link_to login_path do %>
             <i class="fas fa-sign-in-alt"></i>
-            <span>ログイン</span>
+            <span><%= t('header.login') %></span>
           <% end %>
         </li>
         <li class="item" id="signup-link">
           <%= link_to signup_path, data: {"turbolinks" => false} do %>
             <i class="fas fa-user-plus"></i>
-            <span>新規登録</span>
+            <span><%= t('header.sighup') %></span>
           <% end %>
         </li>
       <% end %>
