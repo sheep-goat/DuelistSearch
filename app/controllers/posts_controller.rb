@@ -22,6 +22,7 @@ class PostsController < ApplicationController
   end
 
   def search
+    @game_list = Game.all
     query = request.query_parameters
     unless query.empty?
       @post = Post.where(prefecture_id: query[:prefecture_id])

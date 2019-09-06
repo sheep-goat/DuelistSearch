@@ -1,102 +1,117 @@
-<div id="search-area">
-  <h2 id="area-map-title" class="title">
-    <i class="fas fa-search"></i>
-    <span><%= t('search.area') %></span>
-  </h2>
-  <div class="area-map">
-    <div class="area-boxes">
-      <div class="area-box" id="area-box-region-hokkaido">
-        <div class="region"><%= t('regions.hokkaido') %></div>
-        <ul class="prefectures">
-          <li class="prefecture"><%= link_to '北海道', posts_search_path(prefecture_id: 1) %></li>
-        </ul>
+<div id="search-menus">
+  <div id="search-area" class="search-menu">
+    <h2 id="area-map-title" class="title">
+      <i class="fas fa-map-marker-alt"></i>
+      <span><%= t('search.area') %></span>
+    </h2>
+    <div class="area-map">
+      <div class="area-boxes">
+        <div class="area-box" id="area-box-region-hokkaido">
+          <div class="region"><%= t('regions.hokkaido') %></div>
+          <ul class="prefectures">
+            <li class="prefecture"><%= link_to '北海道', posts_search_path(prefecture_id: 1) %></li>
+          </ul>
+        </div>
+        <div class="area-box" id="area-box-region-tohoku">
+          <div class="region"><%= t('regions.tohoku') %></div>
+          <ul class="prefectures">
+            <li class="prefecture"><%= link_to '青森', posts_search_path(prefecture_id: 2) %></li>
+            <li class="prefecture"><%= link_to '岩手', posts_search_path(prefecture_id: 3) %></li>
+            <li class="prefecture"><%= link_to '宮城', posts_search_path(prefecture_id: 4) %></li>
+            <li class="prefecture"><%= link_to '秋田', posts_search_path(prefecture_id: 5) %></li>
+            <li class="prefecture"><%= link_to '山形', posts_search_path(prefecture_id: 6) %></li>
+            <li class="prefecture"><%= link_to '福島', posts_search_path(prefecture_id: 7) %></li>
+          </ul>
+        </div>
+        <div class="area-box" id="area-box-region-kanto">
+          <div class="region"><%= t('regions.kanto') %></div>
+          <ul class="prefectures">
+            <li class="prefecture"><%= link_to '茨城', posts_search_path(prefecture_id: 8) %></li>
+            <li class="prefecture"><%= link_to '栃木', posts_search_path(prefecture_id: 9) %></li>
+            <li class="prefecture"><%= link_to '群馬', posts_search_path(prefecture_id: 10) %></li>
+            <li class="prefecture"><%= link_to '埼玉', posts_search_path(prefecture_id: 11) %></li>
+            <li class="prefecture"><%= link_to '千葉', posts_search_path(prefecture_id: 12) %></li>
+            <li class="prefecture"><%= link_to '東京', posts_search_path(prefecture_id: 13) %></li>
+            <li class="prefecture"><%= link_to '神奈川', posts_search_path(prefecture_id: 14) %></li>
+          </ul>
+        </div>
+        <div class="area-box" id="area-box-region-hokuriku">
+          <div class="region"><%= t('regions.hokuriku') %></div>
+          <ul class="prefectures">
+            <li class="prefecture"><%= link_to '新潟', posts_search_path(prefecture_id: 15) %></li>
+            <li class="prefecture"><%= link_to '富山', posts_search_path(prefecture_id: 16) %></li>
+            <li class="prefecture"><%= link_to '石川', posts_search_path(prefecture_id: 17) %></li>
+            <li class="prefecture"><%= link_to '福井', posts_search_path(prefecture_id: 18) %></li>
+          </ul>
+        </div>
+        <div class="area-box" id="area-box-region-tokai">
+          <div class="region"><%= t('regions.tokai') %></div>
+          <ul class="prefectures">
+            <li class="prefecture"><%= link_to '山梨', posts_search_path(prefecture_id: 19) %></li>
+            <li class="prefecture"><%= link_to '長野', posts_search_path(prefecture_id: 20) %></li>
+            <li class="prefecture"><%= link_to '岐阜', posts_search_path(prefecture_id: 21) %></li>
+            <li class="prefecture"><%= link_to '静岡', posts_search_path(prefecture_id: 22) %></li>
+            <li class="prefecture"><%= link_to '愛知', posts_search_path(prefecture_id: 23) %></li>
+          </ul>
+        </div>
+        <div class="area-box" id="area-box-region-kansai">
+          <div class="region"><%= t('regions.kansai') %></div>
+          <ul class="prefectures">
+            <li class="prefecture"><%= link_to '三重', posts_search_path(prefecture_id: 24) %></li>
+            <li class="prefecture"><%= link_to '滋賀', posts_search_path(prefecture_id: 25) %></li>
+            <li class="prefecture"><%= link_to '京都', posts_search_path(prefecture_id: 26) %></li>
+            <li class="prefecture"><%= link_to '大阪', posts_search_path(prefecture_id: 27) %></li>
+            <li class="prefecture"><%= link_to '兵庫', posts_search_path(prefecture_id: 28) %></li>
+            <li class="prefecture"><%= link_to '奈良', posts_search_path(prefecture_id: 29) %></li>
+            <li class="prefecture"><%= link_to '和歌山', posts_search_path(prefecture_id: 30) %></li>
+          </ul>
+        </div>
+        <div class="area-box" id="area-box-region-chugoku">
+          <div class="region"><%= t('regions.chugoku') %></div>
+          <ul class="prefectures">
+            <li class="prefecture"><%= link_to '鳥取', posts_search_path(prefecture_id: 31) %></li>
+            <li class="prefecture"><%= link_to '島根', posts_search_path(prefecture_id: 32) %></li>
+            <li class="prefecture"><%= link_to '岡山', posts_search_path(prefecture_id: 33) %></li>
+            <li class="prefecture"><%= link_to '広島', posts_search_path(prefecture_id: 34) %></li>
+            <li class="prefecture"><%= link_to '山口', posts_search_path(prefecture_id: 35) %></li>
+          </ul>
+        </div>
+        <div class="area-box" id="area-box-region-shikoku">
+          <div class="region"><%= t('regions.shikoku') %></div>
+          <ul class="prefectures">
+            <li class="prefecture"><%= link_to '徳島', posts_search_path(prefecture_id: 36) %></li>
+            <li class="prefecture"><%= link_to '香川', posts_search_path(prefecture_id: 37) %></li>
+            <li class="prefecture"><%= link_to '愛媛', posts_search_path(prefecture_id: 38) %></li>
+            <li class="prefecture"><%= link_to '高知', posts_search_path(prefecture_id: 39) %></li>
+          </ul>
+        </div>
+        <div class="area-box" id="area-box-region-kyushu">
+          <div class="region"><%= t('regions.kyushu') %></div>
+          <ul class="prefectures">
+            <li class="prefecture"><%= link_to '福岡', posts_search_path(prefecture_id: 40) %></li>
+            <li class="prefecture"><%= link_to '佐賀', posts_search_path(prefecture_id: 41) %></li>
+            <li class="prefecture"><%= link_to '長崎', posts_search_path(prefecture_id: 42) %></li>
+            <li class="prefecture"><%= link_to '熊本', posts_search_path(prefecture_id: 43) %></li>
+            <li class="prefecture"><%= link_to '大分', posts_search_path(prefecture_id: 44) %></li>
+            <li class="prefecture"><%= link_to '宮崎', posts_search_path(prefecture_id: 45) %></li>
+            <li class="prefecture"><%= link_to '鹿児島', posts_search_path(prefecture_id: 46) %></li>
+            <li class="prefecture"><%= link_to '沖縄', posts_search_path(prefecture_id: 47) %></li>
+          </ul>
+        </div>
       </div>
-      <div class="area-box" id="area-box-region-tohoku">
-        <div class="region"><%= t('regions.tohoku') %></div>
-        <ul class="prefectures">
-          <li class="prefecture"><%= link_to '青森', posts_search_path(prefecture_id: 2) %></li>
-          <li class="prefecture"><%= link_to '岩手', posts_search_path(prefecture_id: 3) %></li>
-          <li class="prefecture"><%= link_to '宮城', posts_search_path(prefecture_id: 4) %></li>
-          <li class="prefecture"><%= link_to '秋田', posts_search_path(prefecture_id: 5) %></li>
-          <li class="prefecture"><%= link_to '山形', posts_search_path(prefecture_id: 6) %></li>
-          <li class="prefecture"><%= link_to '福島', posts_search_path(prefecture_id: 7) %></li>
-        </ul>
-      </div>
-      <div class="area-box" id="area-box-region-kanto">
-        <div class="region"><%= t('regions.kanto') %></div>
-        <ul class="prefectures">
-          <li class="prefecture"><%= link_to '茨城', posts_search_path(prefecture_id: 8) %></li>
-          <li class="prefecture"><%= link_to '栃木', posts_search_path(prefecture_id: 9) %></li>
-          <li class="prefecture"><%= link_to '群馬', posts_search_path(prefecture_id: 10) %></li>
-          <li class="prefecture"><%= link_to '埼玉', posts_search_path(prefecture_id: 11) %></li>
-          <li class="prefecture"><%= link_to '千葉', posts_search_path(prefecture_id: 12) %></li>
-          <li class="prefecture"><%= link_to '東京', posts_search_path(prefecture_id: 13) %></li>
-          <li class="prefecture"><%= link_to '神奈川', posts_search_path(prefecture_id: 14) %></li>
-        </ul>
-      </div>
-      <div class="area-box" id="area-box-region-hokuriku">
-        <div class="region"><%= t('regions.hokuriku') %></div>
-        <ul class="prefectures">
-          <li class="prefecture"><%= link_to '新潟', posts_search_path(prefecture_id: 15) %></li>
-          <li class="prefecture"><%= link_to '富山', posts_search_path(prefecture_id: 16) %></li>
-          <li class="prefecture"><%= link_to '石川', posts_search_path(prefecture_id: 17) %></li>
-          <li class="prefecture"><%= link_to '福井', posts_search_path(prefecture_id: 18) %></li>
-        </ul>
-      </div>
-      <div class="area-box" id="area-box-region-tokai">
-        <div class="region"><%= t('regions.tokai') %></div>
-        <ul class="prefectures">
-          <li class="prefecture"><%= link_to '山梨', posts_search_path(prefecture_id: 19) %></li>
-          <li class="prefecture"><%= link_to '長野', posts_search_path(prefecture_id: 20) %></li>
-          <li class="prefecture"><%= link_to '岐阜', posts_search_path(prefecture_id: 21) %></li>
-          <li class="prefecture"><%= link_to '静岡', posts_search_path(prefecture_id: 22) %></li>
-          <li class="prefecture"><%= link_to '愛知', posts_search_path(prefecture_id: 23) %></li>
-        </ul>
-      </div>
-      <div class="area-box" id="area-box-region-kansai">
-        <div class="region"><%= t('regions.kansai') %></div>
-        <ul class="prefectures">
-          <li class="prefecture"><%= link_to '三重', posts_search_path(prefecture_id: 24) %></li>
-          <li class="prefecture"><%= link_to '滋賀', posts_search_path(prefecture_id: 25) %></li>
-          <li class="prefecture"><%= link_to '京都', posts_search_path(prefecture_id: 26) %></li>
-          <li class="prefecture"><%= link_to '大阪', posts_search_path(prefecture_id: 27) %></li>
-          <li class="prefecture"><%= link_to '兵庫', posts_search_path(prefecture_id: 28) %></li>
-          <li class="prefecture"><%= link_to '奈良', posts_search_path(prefecture_id: 29) %></li>
-          <li class="prefecture"><%= link_to '和歌山', posts_search_path(prefecture_id: 30) %></li>
-        </ul>
-      </div>
-      <div class="area-box" id="area-box-region-chugoku">
-        <div class="region"><%= t('regions.chugoku') %></div>
-        <ul class="prefectures">
-          <li class="prefecture"><%= link_to '鳥取', posts_search_path(prefecture_id: 31) %></li>
-          <li class="prefecture"><%= link_to '島根', posts_search_path(prefecture_id: 32) %></li>
-          <li class="prefecture"><%= link_to '岡山', posts_search_path(prefecture_id: 33) %></li>
-          <li class="prefecture"><%= link_to '広島', posts_search_path(prefecture_id: 34) %></li>
-          <li class="prefecture"><%= link_to '山口', posts_search_path(prefecture_id: 35) %></li>
-        </ul>
-      </div>
-      <div class="area-box" id="area-box-region-shikoku">
-        <div class="region"><%= t('regions.shikoku') %></div>
-        <ul class="prefectures">
-          <li class="prefecture"><%= link_to '徳島', posts_search_path(prefecture_id: 36) %></li>
-          <li class="prefecture"><%= link_to '香川', posts_search_path(prefecture_id: 37) %></li>
-          <li class="prefecture"><%= link_to '愛媛', posts_search_path(prefecture_id: 38) %></li>
-          <li class="prefecture"><%= link_to '高知', posts_search_path(prefecture_id: 39) %></li>
-        </ul>
-      </div>
-      <div class="area-box" id="area-box-region-kyushu">
-        <div class="region"><%= t('regions.kyushu') %></div>
-        <ul class="prefectures">
-          <li class="prefecture"><%= link_to '福岡', posts_search_path(prefecture_id: 40) %></li>
-          <li class="prefecture"><%= link_to '佐賀', posts_search_path(prefecture_id: 41) %></li>
-          <li class="prefecture"><%= link_to '長崎', posts_search_path(prefecture_id: 42) %></li>
-          <li class="prefecture"><%= link_to '熊本', posts_search_path(prefecture_id: 43) %></li>
-          <li class="prefecture"><%= link_to '大分', posts_search_path(prefecture_id: 44) %></li>
-          <li class="prefecture"><%= link_to '宮崎', posts_search_path(prefecture_id: 45) %></li>
-          <li class="prefecture"><%= link_to '鹿児島', posts_search_path(prefecture_id: 46) %></li>
-          <li class="prefecture"><%= link_to '沖縄', posts_search_path(prefecture_id: 47) %></li>
-        </ul>
-      </div>
+    </div>
+  </div>
+  <div id="search-game" class="search-menu">
+    <h2 id="card-game-title" class="title">
+      <i class="fas fa-gamepad"></i>
+      <span><%= t('search.game') %></span>
+    </h2>
+    <div class="game-list">
+      <ul class="games">
+        <% @game_list.each do |game| %>
+          <li class="game"><%= link_to "#{game[:title]}", posts_search_path(game_id: "#{game[:id]}") %></li>
+        <% end %>
+      </ul>
     </div>
   </div>
 </div>

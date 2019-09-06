@@ -5,16 +5,20 @@
     color: #DC143C;
 }
 
-#search-area {
-  width: 600px;
-  height: 500px;
+.search-menu {
   border: solid 3px #6091d3;
   border-radius: 10px;
   margin-top: 50px;
-  #area-map-title {
-    margin: 10px 20px;
+
+  .title {
+    margin: 15px 20px;
     font-size: 18px;
   }
+}
+
+#search-area {
+  width: 600px;
+  height: 500px;
 
   .area-map {
     margin-left: 100px;
@@ -117,5 +121,17 @@
   li:last-child:after,
   li:nth-child(3n):after {
     content: '';
+  }
+}
+
+#search-game {
+  width: 300px;
+  height: 500px;
+  .game-list {
+    margin-left: 10px;
+    li a {
+      font-size: 14px;
+      text-decoration: none;
+    }
   }
 }
