@@ -14,28 +14,26 @@
     <%= form.text_field :email %>
   </div>
 
-  <div class="password">
-    <%= form.label :password, "パスワード" %>
-    <%= form.password_field :password %>
-  </div>
+  <% if action == 'create' %>
+    <div class="password">
+      <%= form.label :password, "パスワード" %>
+      <%= form.password_field :password %>
+    </div>
 
-  <div class="password_comfirm">
-    <%= form.label :password_confirmation, "パスワード(確認)" %>
-    <%= form.password_field :password_confirmation %>
-  </div>
+    <div class="password_comfirm">
+      <%= form.label :password_confirmation, "パスワード(確認)" %>
+      <%= form.password_field :password_confirmation %>
+    </div>
+  <% end %>
 
   <div class="user-icon">
     <%= form.label :image_path, "アイコン" %>
-    <div id="img_field" onClick="$('#select_file').click()" >
-
-      <% if @user.image_path.url.present? %>
-        <%= image_tag @user.image_path.url %>
-      <% else %>
-        <i class="fas fa-image"></i><i class="fas fa-file-upload add"></i>
-      <% end %>
-
-    </div>
-    <%= form.file_field :image_path, class: "image", style: "display:none;", id: "select_file" %>
+    <% if @user.image_path.url.present? %>
+      <%= image_tag @user.image_path.url %>
+    <% else %>
+      <i class="fas fa-image"></i><i class="fas fa-file-upload add"></i>
+    <% end %>
+    <%= form.file_field :image_path %>
   </div>
 
   <div class="buttom">

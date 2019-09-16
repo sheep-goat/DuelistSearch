@@ -22,11 +22,11 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = current_user
-    @user.update_attributes(user_param)
-    if @user.valid?
-      @user.save
-      redirect_to user_show_path(current_user.username)
+    user = current_user
+    user.update_attributes(user_param)
+    if user.valid?
+      user.save
+      redirect_to user_show_path(user[:username])
     else
       redirect_to user_edit_path(current_user.username)
     end
