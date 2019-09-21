@@ -1,42 +1,57 @@
 <%= form_with model: @user, url: {controller: 'users', action: action}, local: true do |form| %>
-  <div class="username">
-    <%= form.label :username, "ユーザID" %>
-    <%= form.text_field :username %>
-  </div>
-
-  <div class="nickname">
-    <%= form.label :nickname, "ニックネーム" %>
-    <%= form.text_field :nickname %>
-  </div>
-
-  <div class="email">
-    <%= form.label :email, "メールアドレス" %>
-    <%= form.text_field :email %>
-  </div>
-
-  <% if action == 'create' %>
-    <div class="password">
-      <%= form.label :password, "パスワード" %>
-      <%= form.password_field :password %>
+  <div id="user-info-boxes">
+    <div class="user-icon">
+      <%= form.label :image_path, "アイコン" %>
+      <% if @user.image_path.url.present? %>
+        <%= image_tag @user.image_path.url %>
+      <% else %>
+      <% end %>
+      <%= form.file_field :image_path, class: "user-icon-input" %>
     </div>
+  </div>
 
-    <div class="password_comfirm">
-      <%= form.label :password_confirmation, "パスワード(確認)" %>
-      <%= form.password_field :password_confirmation %>
+  <div id="user-text-boxes">
+    <div class="username">
+      <%= form.label :username, "ユーザID" %>
+      <%= form.text_field :username %>
     </div>
-  <% end %>
-
-  <div class="user-icon">
-    <%= form.label :image_path, "アイコン" %>
-    <% if @user.image_path.url.present? %>
-      <%= image_tag @user.image_path.url %>
-    <% else %>
-      <i class="fas fa-image"></i><i class="fas fa-file-upload add"></i>
+    <div class="nickname">
+      <%= form.label :nickname, "ニックネーム" %>
+      <%= form.text_field :nickname %>
+    </div>
+    <div class="email">
+      <%= form.label :email, "メールアドレス" %>
+      <%= form.text_field :email %>
+    </div>
+    <div class="age">
+      <%= form.label :age, "年齢" %>
+      <%= form.select :age, ["10代", "20代", "30代", "40代", "50代", "60代以上", "その他"], :prompt => "選択してください" %>
+    </div>
+    <div class="gender">
+      <%= form.label :gender, "性別" %>
+      <%= form.select :gender, ["男性", "女性", "その他", "無回答"], :prompt => "選択してください" %>
+    </div>
+    <div class="area">
+      <%= form.label :area, "地域" %>
+      <%= form.text_field :area %>
+    </div>
+    <div class="profile">
+      <%= form.label :profile, "自己紹介" %>
+      <%= form.text_area :profile %>
+    </div>
+    <% if action == 'create' %>
+      <div class="password">
+        <%= form.label :password, "パスワード" %>
+        <%= form.password_field :password %>
+      </div>
+      <div class="password_comfirm">
+        <%= form.label :password_confirmation, "パスワード(確認)" %>
+        <%= form.password_field :password_confirmation %>
+      </div>
     <% end %>
-    <%= form.file_field :image_path %>
   </div>
 
-  <div class="buttom">
+  <div class="user-button">
     <%= form.submit %>
   </div>
 <% end %>

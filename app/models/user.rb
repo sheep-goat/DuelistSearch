@@ -19,4 +19,6 @@ class User < ApplicationRecord
   validates :nickname, length: { minimum: 1, maximum: 50 }
   validates :email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
   validates :password, length: { minimum: 8 }, confirmation: true, on: :create
+  validates :area, length: { maximum: 50 }
+  validates :profile, length: { maximum: 254 }
 end

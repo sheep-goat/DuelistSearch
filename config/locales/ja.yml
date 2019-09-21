@@ -12,6 +12,11 @@ ja:
     logout: "ログアウト"
     sighup: "新規登録"
     search: "探す"
+  user:
+    new:
+      title: "新規登録"
+    edit:
+      title: "プロフィールの編集"
   search:
     area: "エリアから探す"
     game: "ゲームタイトルから探す"
