@@ -75,6 +75,10 @@ ActiveRecord::Schema.define(version: 2019_07_27_001800) do
     t.string "nickname", null: false
     t.string "email", null: false
     t.string "password_digest", null: false
+    t.string "age", null: false
+    t.string "gender", null: false
+    t.string "area"
+    t.string "profile"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_path"
