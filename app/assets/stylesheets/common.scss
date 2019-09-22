@@ -51,3 +51,20 @@ h2 {
   width: 950px;
   margin: 0 auto;
 }
+
+.require_entry,
+.voluntary_entry {
+  width: fit-content;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  color: #FFF;
+  padding: 0 10px;
+  margin-left: 10px;
+}
+.require_entry {
+  background: #FF0000;
+}
+.voluntary_entry {
+  background: #7C7C7C;
+}

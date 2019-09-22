@@ -12,6 +12,9 @@ ja:
     logout: "ログアウト"
     sighup: "新規登録"
     search: "探す"
+  form:
+    require: "必須"
+    voluntary: "任意"
   user:
     new:
       title: "新規登録"

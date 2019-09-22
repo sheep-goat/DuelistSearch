@@ -12,40 +12,63 @@
 
   <div id="user-text-boxes">
     <div class="username">
-      <%= form.label :username, "ユーザID" %>
+      <%= form.label :username do %>
+        <span class="form-title">ユーザID</span>
+        <span class="require_entry"><%= t('form.require') %></span>
+      <% end %>
       <%= form.text_field :username %>
     </div>
     <div class="nickname">
-      <%= form.label :nickname, "ニックネーム" %>
+      <%= form.label :nickname do %>
+        <span class="form-title">ニックネーム</span>
+        <span class="require_entry"><%= t('form.require') %></span>
+      <% end %>
       <%= form.text_field :nickname %>
     </div>
     <div class="email">
-      <%= form.label :email, "メールアドレス" %>
+      <%= form.label :email do %>
+        <span class="form-title">メールアドレス</span>
+        <span class="require_entry"><%= t('form.require') %></span>
+      <% end %>
       <%= form.text_field :email %>
     </div>
     <div class="age">
-      <%= form.label :age, "年齢" %>
+      <%= form.label :age do %>
+        <span class="form-title">年齢</span>
+        <span class="require_entry"><%= t('form.require') %></span>
+      <% end %>
       <%= form.select :age, ["10代", "20代", "30代", "40代", "50代", "60代以上", "その他"], :prompt => "選択してください" %>
     </div>
     <div class="gender">
-      <%= form.label :gender, "性別" %>
+      <%= form.label :gender do %>
+        <span class="form-title">性別</span>
+        <span class="require_entry"><%= t('form.require') %></span>
+      <% end %>
       <%= form.select :gender, ["男性", "女性", "その他", "無回答"], :prompt => "選択してください" %>
     </div>
     <div class="area">
-      <%= form.label :area, "地域" %>
+      <%= form.label :area do %>
+        <span class="form-title">地域</span>
+        <span class="voluntary_entry"><%= t('form.voluntary') %></span>
+      <% end %>
       <%= form.text_field :area %>
     </div>
     <div class="profile">
-      <%= form.label :profile, "自己紹介" %>
+      <%= form.label :profile do %>
+        <span class="form-title">自己紹介</span>
+        <span class="voluntary_entry"><%= t('form.voluntary') %></span>
+      <% end %>
       <%= form.text_area :profile %>
     </div>
     <% if action == 'create' %>
       <div class="password">
         <%= form.label :password, "パスワード" %>
+        <div class="require_entry"><%= t('form.require') %></div>
         <%= form.password_field :password %>
       </div>
       <div class="password_comfirm">
         <%= form.label :password_confirmation, "パスワード(確認)" %>
+        <div class="require_entry"><%= t('form.require') %></div>
         <%= form.password_field :password_confirmation %>
       </div>
     <% end %>
