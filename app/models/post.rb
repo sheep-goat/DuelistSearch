@@ -1,4 +1,6 @@
 class Post < ApplicationRecord
+  mount_uploader :image_path, PostImageUploader
+
   belongs_to :user
   belongs_to :game
   belongs_to :prefecture

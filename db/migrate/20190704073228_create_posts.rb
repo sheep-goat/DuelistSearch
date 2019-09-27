@@ -9,6 +9,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string :location
       t.integer :max_participant
       t.text :desc
+      t.string :image_path
 
       t.timestamps
     end

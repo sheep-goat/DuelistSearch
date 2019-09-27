@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 2019_07_27_001800) do
     t.string "location"
     t.integer "max_participant"
     t.text "desc"
+    t.string "image_path"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["game_id"], name: "index_posts_on_game_id"
