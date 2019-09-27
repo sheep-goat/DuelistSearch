@@ -52,6 +52,12 @@ h2 {
   margin: 0 auto;
 }
 
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
 .require_entry,
 .voluntary_entry {
   width: fit-content;

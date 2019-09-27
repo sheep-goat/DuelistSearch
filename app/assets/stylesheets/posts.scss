@@ -16,6 +16,41 @@
   }
 }
 
+#post-form-inner {
+  width: 700px;
+  margin: 0 auto;
+  background: #FFF;
+}
+
+#post-form-boxes {
+  input, select, textarea {
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 13px;
+    border: 1px solid #CCC;
+  }
+
+  input.post-image-input {
+    border: none;
+  }
+
+  .post-content {
+    padding: 40px;
+    border-top: 1px solid #EEE;
+  }
+
+  .post-form-box {
+    .title input {
+      width: 600px;
+    }
+    .desc textarea {
+      resize: vertical;
+      width: 600px;
+      height: 200px;
+    }
+  }
+}
+
 #search-area {
   width: 600px;
   height: 500px;
@@ -133,5 +168,19 @@
       font-size: 14px;
       text-decoration: none;
     }
+  }
+}
+
+.post-button {
+  text-align: right;
+  margin-right: 80px;
+  input {
+    width: 100px;
+    height: 40px;
+    color: #FFF;
+    background: #4169E1;
+  }
+  input:hover, input:active {
+    background: #2d2de0
   }
 }

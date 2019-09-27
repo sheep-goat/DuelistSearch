@@ -1,40 +1,94 @@
 <%= form_with model: @post, url: {controller: 'posts', action: action}, local: true do |form| %>
-  <div class="title">
-    <%= form.label :title, "タイトル" %>
-    <%= form.text_field :title %>
-  </div>
+  <div id="post-form-inner">
+    <div id="post-form-boxes">
+      <div class="post-content">
+        <div class="post-image">
+          <%= form.label :image_path, "画像" %>
+          <% if @post.image_path.url.present? %>
+            <%= image_tag @post.image_path.url %>
+          <% else %>
+          <% end %>
+          <%= form.file_field :image_path, class: "post-image-input" %>
+        </div>
+      </div>
 
-  <div class="game">
-    <%= form.label :game_id, "ゲーム" %>
-    <%= form.collection_select :game_id, Game.all, :id, :title, :prompt => true %>
-  </div>
+      <div class="post-content">
+        <div class="post-form-box">
+          <div class="form-group title">
+            <%= form.label :title do %>
+              <span class="form-title">タイトル</span>
+              <span class="require_entry"><%= t('form.require') %></span>
+            <% end %>
+            <%= form.text_field :title %>
+          </div>
 
-  <div class="schedule_date">
-    <%= form.label :schedule_date, "日時" %>
-    <%= form.date_field :schedule_date %>
-  </div>
+          <div class="form-group desc">
+            <%= form.label :desc do %>
+              <span class="form-title">説明</span>
+              <span class="require_entry"><%= t('form.require') %></span>
+            <% end %>
+            <%= form.text_area :desc %>
+          </div>
+        </div>
+      </div>
 
-  <div class="prefecture">
-    <%= form.label :prefecture_id, "場所" %>
-    <%= form.collection_select :prefecture_id, Prefecture.all, :id, :name, :prompt => true %>
-  </div>
+      <div class="post-content">
+        <h3 class="post-sub-title"></h3>
+        <div class="post-form-box">
+          <div class="form-group game">
+            <%= form.label :game_id do %>
+              <span class="form-title">ゲーム</span>
+              <span class="require_entry"><%= t('form.require') %></span>
+            <% end %>
+            <%= form.collection_select :game_id, Game.all, :id, :title, :prompt => true %>
+          </div>
+        </div>
+      </div>
 
-  <div class="location">
-    <%= form.label :location, "会場" %>
-    <%= form.text_field :location %>
-  </div>
+      <div class="post-content">
+        <div class="post-form-box">
+          <div class="form-group schedule_date">
+            <%= form.label :schedule_date do %>
+              <span class="form-title">日時</span>
+              <span class="require_entry"><%= t('form.require') %></span>
+            <% end %>
+            <%= form.date_field :schedule_date %>
+          </div>
 
-  <div class="max_participant">
-    <%= form.label :max_participant, "定員" %>
-    <%= form.text_field :max_participant %>
-  </div>
+          <div class="form-group prefecture">
+            <%= form.label :prefecture_id do %>
+              <span class="form-title">場所</span>
+              <span class="require_entry"><%= t('form.require') %></span>
+            <% end %>
+            <%= form.collection_select :prefecture_id, Prefecture.all, :id, :name, :prompt => true %>
+          </div>
 
-  <div class="desc">
-    <%= form.label :desc, "説明" %>
-    <%= form.text_area :desc %>
-  </div>
+          <div class="form-group location">
+            <%= form.label :location do %>
+              <span class="form-title">会場</span>
+              <span class="voluntary_entry"><%= t('form.voluntary') %></span>
+            <% end %>
+            <%= form.text_field :location %>
+          </div>
+        </div>
+      </div>
 
-  <div class="buttom">
-    <%= form.submit %>
+      <div class="post-content">
+        <h3 class="post-sub-title"></h3>
+        <div class="post-form-box">
+          <div class="form-group max_participant">
+            <%= form.label :max_participant do %>
+              <span class="form-title">募集人数</span>
+              <span class="require_entry"><%= t('form.require') %></span>
+            <% end %>
+            <%= form.text_field :max_participant %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="post-button">
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>
