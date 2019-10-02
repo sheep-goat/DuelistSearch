@@ -3,11 +3,16 @@
 <% if @post.empty? %>
   <span>Empty.</span>
 <% else %>
-  <table>
-    <% @post.each do |post| %>
-      <tr>
-        <td class="title"><%= link_to post.title, post_show_path(@user.username, post.id) %></td>
-      </tr>
-    <% end %>
-  </table>
+  <div class="posts-frame">
+    <div class="posts-frame-inner">
+      <div class="posts-header"></div>
+      <div class="posts-list">
+        <div class="post-list-inner">
+          <% @post.each do |post| %>
+            <%= render partial: 'layouts/post_list_item', locals: { post: post, username: @user.username } %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 <% end %>
