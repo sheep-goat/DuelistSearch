@@ -46,10 +46,66 @@
   input {
     width: 100px;
     height: 40px;
-  color: #FFF;
-  background: #4169E1;
+    color: #FFF;
+   background: #4169E1;
+  }
+  input:hover, input:active {
+    background: #2d2de0
+  }
 }
-input:hover, input:active {
-  background: #2d2de0
+
+#user-contents-inner {
+  display: flex;
 }
+
+#profile-panel {
+  margin: 10px;
+  .profile-panel-inner {
+    width: 250px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #FFF;
+    .user-icon {
+      text-align: center;
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: solid 2px #AAA;
+        padding: 4px;
+      }
+    }
+    .user-info {
+      text-align: center;
+      .name {
+        .nickname {
+          font-size: 20px;
+          height: 23px;
+          font-weight: bold;
+        }
+        .username a {
+          font-size: 13px;
+          color: #999;
+          text-decoration: none;
+        }
+      }
+    }
+    .profile {
+      margin: 10px 0;
+      font-size: 13px;
+    }
+    .user-subinfo {
+      color: #999;
+      font-size: 13px;
+      .age, .gender {
+        padding: 5px;
+      }
+    }
+    .area {
+      color: #999;
+      font-size: 13px;
+      margin: 2px;
+    }
+  }
 }

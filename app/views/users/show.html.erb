@@ -1,18 +1,19 @@
-<%= @user.nickname %>
-<%= link_to "Edit", user_edit_path(@user.username), data: {"turbolinks" => false} %>
-<% if @post.empty? %>
-  <span>Empty.</span>
-<% else %>
-  <div class="posts-frame">
-    <div class="posts-frame-inner">
-      <div class="posts-header"></div>
-      <div class="posts-list">
-        <div class="post-list-inner">
-          <% @post.each do |post| %>
-            <%= render partial: 'layouts/post_list_item', locals: { post: post, username: @user.username } %>
-          <% end %>
+<div id="user-contents-inner">
+  <%= render 'users/profile_panel' %>
+  <% if @post.empty? %>
+    <span>Empty.</span>
+  <% else %>
+    <div class="posts-frame">
+      <div class="posts-frame-inner">
+        <div class="posts-header"></div>
+        <div class="posts-list">
+          <div class="post-list-inner">
+            <% @post.each do |post| %>
+              <%= render partial: 'layouts/post_list_item', locals: { post: post, username: @user.username } %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
