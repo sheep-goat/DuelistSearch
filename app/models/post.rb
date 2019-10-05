@@ -16,6 +16,6 @@ class Post < ApplicationRecord
   validates :max_participant, numericality: { only_integer: true, greater_than: 0 }
 
   def self.latest_record
-    Post.first(5)
+    Post.order(created_at: :desc)
   end
 end

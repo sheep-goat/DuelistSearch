@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  PAGE_PER = 15
   def new
     @post = Post.new()
   end
@@ -24,8 +25,10 @@ class PostsController < ApplicationController
   def search
     @game_list = Game.all
     query = request.query_parameters
-    @post = Post.latest_record
-    @post = Post.where(prefecture_id: query[:prefecture_id]) unless query.empty?
+    @post = Post.latest_record.page(params[:page]).per(PAGE_PER)
+    unless query[:prefecture_id].nil?
+      @post = Post.where(prefecture_id: query[:prefecture_id]).page(params[:page]).per(PAGE_PER)
+    end
   end
 
   private
