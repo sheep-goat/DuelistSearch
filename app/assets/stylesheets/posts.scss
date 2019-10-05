@@ -8,11 +8,12 @@
 .search-menu {
   border: solid 3px #6091d3;
   border-radius: 10px;
-  margin-top: 50px;
+  margin: 50px 10px;
 
   .title {
     margin: 15px 20px;
-    font-size: 18px;
+    font-size: 15px;
+    color: #505050;
   }
 }
 
@@ -51,122 +52,126 @@
   }
 }
 
-#search-area {
-  width: 600px;
-  height: 500px;
+#menus-inner {
+  display: flex;
+  #search-area {
+    width: 600px;
+    height: 500px;
+    .fa-map-marker-alt {  }
 
-  .area-map {
-    margin-left: 100px;
-    height: 100%;
-    background: url("background_img/japanmap.png");
-    background-repeat: no-repeat;
-    background-size: 80% auto;
-  }
+    .area-map {
+      margin-left: 100px;
+      height: 100%;
+      background: url("background_img/japanmap.png");
+      background-repeat: no-repeat;
+      background-size: 80% auto;
+    }
 
-  .area-boxes {
-    position: relative;
-  }
+    .area-boxes {
+      position: relative;
+    }
 
-  .image-map img {
-    width: 40%;
-  }
+    .image-map img {
+      width: 40%;
+    }
 
-  .area-box {
-    position: absolute;
-    text-align: center;
-    width: 100px;
-    border: solid 2px #6091d3;
-    border-radius: 10px;
-    background-color: #FFFFFF;
-  }
+    .area-box {
+      position: absolute;
+      text-align: center;
+      width: 100px;
+      border: solid 2px #6091d3;
+      border-radius: 10px;
+      background-color: #FFFFFF;
+    }
 
-  #area-box-region-hokkaido {
-    top: 8px;
-    left: 200px;
-  }
+    #area-box-region-hokkaido {
+      top: 8px;
+      left: 200px;
+    }
 
-  #area-box-region-tohoku {
-    top: 80px;
-    left: 330px;
-  }
+    #area-box-region-tohoku {
+      top: 80px;
+      left: 330px;
+    }
 
-  #area-box-region-kanto {
-    top: 180px;
-    left: 330px;
-  }
+    #area-box-region-kanto {
+      top: 180px;
+      left: 330px;
+    }
 
-  #area-box-region-hokuriku {
-    width: 90px;
-    top: 100px;
-    left: 180px;
-  }
+    #area-box-region-hokuriku {
+      width: 90px;
+      top: 100px;
+      left: 180px;
+    }
 
-  #area-box-region-tokai {
-    top: 300px;
-    left: 260px;
-  }
+    #area-box-region-tokai {
+      top: 300px;
+      left: 260px;
+    }
 
-  #area-box-region-kansai {
-    top: 310px;
-    left: 140px;
-  }
+    #area-box-region-kansai {
+      top: 310px;
+      left: 140px;
+    }
 
-  #area-box-region-chugoku {
-    top: 150px;
-    left: 60px;
-  }
+    #area-box-region-chugoku {
+      top: 150px;
+      left: 60px;
+    }
 
-  #area-box-region-shikoku {
-    width: 90px;
-    top: 310px;
-    left: 25px;
-  }
+    #area-box-region-shikoku {
+      width: 90px;
+      top: 310px;
+      left: 25px;
+    }
 
-  #area-box-region-kyushu {
-    top: 190px;
-    left: -70px;
-  }
+    #area-box-region-kyushu {
+      top: 190px;
+      left: -70px;
+    }
 
-  .region {
-    font-size: 14px;
-    font-weight: bold;
-    padding-top: 5px;
-  }
+    .region {
+      font-size: 13px;
+      font-weight: bold;
+      padding-top: 5px;
+    }
 
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style: none;
-    padding-bottom: 5px;
-  }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      padding-bottom: 5px;
+    }
 
-  li a {
-    font-size: 11px;
-    color: #808080;
-    text-decoration: none;
-  }
-
-  li:after {
-    content: '|';
-    color: #808080;
-    font-size: 13px;
-  }
-
-  li:last-child:after,
-  li:nth-child(3n):after {
-    content: '';
-  }
-}
-
-#search-game {
-  width: 300px;
-  height: 500px;
-  .game-list {
-    margin-left: 10px;
     li a {
-      font-size: 14px;
+      font-size: 11px;
+      color: #808080;
       text-decoration: none;
+    }
+
+    li:after {
+      content: '|';
+      color: #808080;
+      font-size: 13px;
+    }
+
+    li:last-child:after,
+    li:nth-child(3n):after {
+      content: '';
+    }
+  }
+
+  #search-game {
+    width: 300px;
+    height: 500px;
+    .game-list {
+      margin-left: 10px;
+      li a {
+        font-size: 14px;
+        text-decoration: none;
+      }
     }
   }
 }

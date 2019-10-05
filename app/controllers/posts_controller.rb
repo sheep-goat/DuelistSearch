@@ -24,9 +24,8 @@ class PostsController < ApplicationController
   def search
     @game_list = Game.all
     query = request.query_parameters
-    unless query.empty?
-      @post = Post.where(prefecture_id: query[:prefecture_id])
-    end
+    @post = Post.latest_record
+    @post = Post.where(prefecture_id: query[:prefecture_id]) unless query.empty?
   end
 
   private
