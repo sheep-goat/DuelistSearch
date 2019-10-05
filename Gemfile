@@ -25,8 +25,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-
+# Set default record
 gem 'seed-fu'
+# Use to pagination
+gem 'kaminari', '~> 0.17.0'
 
 # Japanese localization
 gem 'rails-i18n', '~> 5.1'
