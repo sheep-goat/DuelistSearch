@@ -52,6 +52,36 @@ h2 {
   margin: 0 auto;
 }
 
+.post-panel {
+  width: 150px;
+  float: left;
+  padding: 0 10px;
+  .post-panel-inner {
+    box-shadow: 2px 2px 4px #DDD;
+    .panel-image {
+      margin: 0 auto;
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        background-color: #EEE;
+      }
+    }
+    .panel-title {
+      height: 50px;
+      background-color: #FFF;
+      a {
+        font-size: 13px;
+        color: #303030;
+        text-decoration: none;
+        padding: 0 5px;
+      }
+    }
+  }
+}
+
 label {
   display: block;
   font-size: 13px;

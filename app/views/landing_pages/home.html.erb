@@ -5,6 +5,9 @@
 <% else %>
   <%= link_to 'login', login_path, method: :get %>
 <% end %>
-<% @latest_posts.each do |post| %>
-  <%= link_to post.title, post_show_path(post.user.username, post.id), method: :get %>
-<% end %>
+<div id="latest-posts-list">
+  <h3>最新の投稿</h3>
+  <% @latest_posts.each do |post| %>
+    <%= render partial: 'layouts/post_panel', locals: { post: post } %>
+  <% end %>
+</div>

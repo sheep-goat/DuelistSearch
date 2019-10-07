@@ -1,0 +1,14 @@
+<div class="post-panel">
+  <div class="post-panel-inner">
+    <div class="panel-image">
+      <% if post.image_path.url.present? %>
+        <%= image_tag post.image_path.url %>
+      <% else %>
+        <%= image_tag 'post_no_image.png' %>
+      <% end %>
+    </div>
+    <div class="panel-title">
+      <%= link_to post.title, post_show_path(post.user.username, post.id), method: :get %>
+    </div>
+  </div>
+</div>
