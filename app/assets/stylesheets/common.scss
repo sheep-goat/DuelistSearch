@@ -58,6 +58,7 @@ h2 {
   padding: 0 10px;
   .post-panel-inner {
     box-shadow: 2px 2px 4px #DDD;
+    a { text-decoration: none; }
     .panel-image {
       margin: 0 auto;
       img {
@@ -72,12 +73,10 @@ h2 {
     .panel-title {
       height: 50px;
       background-color: #FFF;
-      a {
-        font-size: 13px;
-        color: #303030;
-        text-decoration: none;
-        padding: 0 5px;
-      }
+      font-size: 13px;
+      color: #303030;
+      text-decoration: none;
+      padding: 0 5px;
     }
   }
 }
