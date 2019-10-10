@@ -40,6 +40,9 @@ gem 'carrierwave'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 
+# Use for tag management
+gem 'acts-as-taggable-on', '~> 6.0'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
