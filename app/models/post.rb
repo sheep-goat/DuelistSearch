@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
   mount_uploader :image_path, PostImageUploader
+  acts_as_taggable
 
   belongs_to :user
   belongs_to :game

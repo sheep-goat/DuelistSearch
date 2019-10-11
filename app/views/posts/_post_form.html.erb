@@ -85,6 +85,18 @@
           </div>
         </div>
       </div>
+
+      <div class="post-content">
+        <div class="post-form-box">
+          <div class="form-group tag-list">
+            <%= form.label :max_participant do %>
+              <span class="form-title">タグ</span>
+              <span class="voluntary_entry"><%= t('form.voluntary') %></span>
+            <% end %>
+            <%= form.text_field :tag_list, value: @post.tag_list.join(',') %>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="post-button">
