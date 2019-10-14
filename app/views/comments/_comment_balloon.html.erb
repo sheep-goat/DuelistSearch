@@ -1,0 +1,24 @@
+<div class="balloon">
+  <div class="balloon-inner">
+    <% if comment.user.username == post.user.username %>
+      <% user = "host" %>
+    <% else %>
+      <% user = "guest" %>
+    <% end %>
+
+    <div class="comment-body <%= user %>">
+      <div class="user-icon">
+        <%= link_to user_show_path(comment.user.username) do %>
+          <% if comment.user.image_path.url.present? %>
+            <%= image_tag comment.user.image_path.url %>
+          <% else %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="main <%= user %>">
+        <div class="username"><%= link_to comment.user.username, user_show_path(comment.user.username) %></div>
+        <div class="message"><%= comment.message %></div>
+      </div>
+    </div>
+  </div>
+</div>

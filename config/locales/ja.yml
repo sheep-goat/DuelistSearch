@@ -23,6 +23,17 @@ ja:
   search:
     area: "エリアから探す"
     game: "ゲームタイトルから探す"
+  post:
+    show:
+      sub-title:
+        basic: "基本情報"
+        desc: "詳細説明"
+        comment: "コメント"
+      key:
+        schedule: "開催日時"
+        location: "開催場所"
+        max: "募集人数"
+        tag_list: "タグ"
   date:
     abbr_day_names:
       - 日
@@ -218,6 +229,7 @@ ja:
     am: 午前
     formats:
       default: "%Y年%m月%d日(%a) %H時%M分%S秒 %z"
+      post: "%Y年%m月%d日(%a) %H時%M分"
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後

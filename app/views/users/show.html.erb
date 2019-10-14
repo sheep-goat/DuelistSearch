@@ -1,5 +1,5 @@
 <div id="user-contents-inner">
-  <%= render 'users/profile_panel' %>
+  <%= render partial: 'users/profile_panel', locals: { user: @user } %>
   <% if @post.empty? %>
     <span>Empty.</span>
   <% else %>

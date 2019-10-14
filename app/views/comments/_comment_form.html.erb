@@ -1,12 +1,11 @@
 <div class="comment-form">
   <%= form_with model: @comment, url: {controller: 'comments', action: 'create'}, local: true do |form| %>
     <div class="message">
-      <%= form.label :message, "コメント" %>
-      <%= form.text_field :message %>
+      <%= form.text_area :message %>
     </div>
 
-    <div class="buttom">
-      <%= form.submit %>
+    <div class="button">
+      <%= form.submit 'コメントする' %>
     </div>
   <% end %>
 </div>

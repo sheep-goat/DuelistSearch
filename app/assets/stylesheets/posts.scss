@@ -189,3 +189,165 @@
     background: #2d2de0
   }
 }
+
+#post-details {
+  #post-details-inner {
+    #post-details-header {
+      margin: 20px 0;
+      background-color: #DDD;
+      .title {
+        font-size: 25px;
+        font-weight: bold;
+        color: #303030;
+        margin: 5px 0 0 10px;
+      }
+    }
+    #post-details-contents {
+      h3 {
+        font-size: 18px;
+      }
+      .details-content-inner {
+        padding: 0 20px;
+        .block { display: flex; }
+        .post-image {
+          img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+          }
+        }
+        .summary {
+          margin: 20px 30px;
+          table {
+            border-collapse: collapse;
+            color: #626855;
+            font-size: 12px;
+            th {
+              width: 80px;
+              text-align: center;
+              border: solid 1px #EEE;
+              padding: 5px 15px;
+              background-color: #EEE;
+            }
+            td {
+              width: 250px;
+              border: solid 1px #EEE;
+              padding: 5px 15px;
+              background: #FFF;
+            }
+          }
+          .favorite-button {
+            margin: 15px 5px;
+            a {
+              text-decoration: none;
+              padding: 4px 10px;
+              background: #ffa07a;
+              border-radius: 4px;
+              span {
+                font-size: 13px;
+                color: #FFF;
+              }
+            }
+          }
+        }
+        .post-desc {
+          .desc {
+            width: 630px;
+            font-size: 14px;
+            color: #505050;
+            background: #fff5ee;
+            padding: 10px 20px;
+            border: 1px solid #DDD;
+            border-radius: 4px;
+          }
+        }
+        .participator-button {
+          width: 630px;
+          text-align: center;
+          margin: 15px 0;
+          a {
+            text-decoration: none;
+            padding: 5px 20px;
+            background: #36D8A2;
+            border-radius: 4px;
+            i {
+              padding-right: 5px;
+              color: #2e8b57;
+            }
+            span {
+              font-size: 14px;
+              color: #FFF;
+            }
+          }
+        }
+        .comment {
+          .comment-body.host { flex-direction: row-reverse; }
+          .comment-body {
+            display: flex;
+            .user-icon img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50px;
+            }
+            .main {
+              position: relative;
+              width: 450px;
+              display: inline-block;
+              margin: 0 20px 40px 20px;
+              padding: 7px 10px;
+              min-width: 120px;
+              max-width: 100%;
+              color: #555;
+              font-size: 16px;
+              background: #e0edff;
+              border-radius: 6px;
+              .username a {
+                font-size: 14px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #303030;
+                padding: 3px;
+              }
+              .message {
+                font-size: 13px;
+                padding: 3px;
+              }
+            }
+            .main.host:before {
+              content: "";
+              position: absolute;
+              top: 30px;
+              left: 100%;
+              margin-top: -15px;
+              border: 8px solid transparent;
+              border-left: 15px solid #e0edff;
+            }
+            .main.guest:before {
+              content: "";
+              position: absolute;
+              top: 30px;
+              left: -23px;
+              margin-top: -15px;
+              border: 8px solid transparent;
+              border-right: 15px solid #e0edff;
+            }
+          }
+          .comment-form {
+            .message textarea {
+              width: 630px;
+              height: 100px;
+            }
+            .button input {
+              width: 630px;
+              font-size: 14px;
+              color: #FFF;
+              background: #AAA;
+              border: 1px solid #AAA;
+              padding: 5px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

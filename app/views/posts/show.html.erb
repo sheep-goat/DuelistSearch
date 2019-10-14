@@ -1,12 +1,76 @@
-<%= @post.title %>
-<%= @post.user.username %>
-<%= @post.game.title %>
-<%= render partial: 'favorites/favorite_form', :locals => { post: @post } %>
-<%= render partial: 'participators/participator_form', :locals => { post: @post } %>
-<%= render partial: 'comments/comment_form', :locals => { post: @post } %>
-<% @comments.each do |comment| %>
-  <div class="comment">
-    <%= link_to comment.user.username, user_show_path(comment.user.username) %>
-    <%= comment.message %>
+<div id="post-details">
+  <div id="post-details-inner">
+    <div id="post-details-header">
+      <div class="title"><%= @post.title %></div>
+      <div class="username"><%= @post.user.username %></div>
+    </div>
+    <div id="post-details-contents">
+      <div class="details-content-inner">
+        <h3 class="sub-title"><%= t('post.show.sub-title.basic') %></h3>
+        <div class="block">
+          <div class="post-image">
+            <% if @post.image_path.url.present? %>
+              <%= image_tag @post.image_path.url %>
+            <% else %>
+              <%= image_tag 'post_no_image.png' %>
+            <% end %>
+          </div>
+          <div class="summary">
+            <table>
+              <tr class="schedule">
+                <th class="key"><%= t('post.show.key.schedule') %></th>
+                <td class="value"><%= format_date(@post.schedule_date) %></td>
+              </tr>
+              <tr class="locations">
+                <th class="key"><%= t('post.show.key.location') %></th>
+                <td class="value">
+                  <div class="prefecture"><%= @post.prefecture.name %></div>
+                  <div class="location"><%= @post.location %></div>
+                </td>
+              </tr>
+              <tr class="max_participant">
+                <th class="key"><%= t('post.show.key.max') %></th>
+                <td class="value"><%= @post.max_participant %></td>
+              </tr>
+              <tr class="tag_list">
+                <th class="key"><%= t('post.show.key.tag_list') %></th>
+                <td class="value">
+                  <% @post.tag_list.each do |tag| %>
+                    <span class="tag"><%= link_to tag, posts_search_path(tag_name: tag) %></span>
+                  <% end %>
+                </td>
+              </tr>
+            </table>
+            <div class="favorite-button">
+              <%= render partial: 'favorites/favorite_form', :locals => { post: @post } %>
+            </div>
+          </div>
+          <div class="post-user-profile">
+          </div>
+        </div>
+        <div class="block">
+          <div class="post-desc">
+            <h3 class="sub-title"><%= t('post.show.sub-title.desc') %></h3>
+            <div class="desc"><%= @post.desc %></div>
+          </div>
+        </div>
+        <div class="block">
+          <div class="participator-button">
+            <%= render partial: 'participators/participator_form', :locals => { post: @post } %>
+          </div>
+        </div>
+        <div class="block">
+          <div class="comment">
+            <h3 class="sub-title"><%= t('post.show.sub-title.comment') %></h3>
+            <div class="comment-content">
+              <% @comments.each do |comment| %>
+                <%= render partial: 'comments/comment_balloon', locals: { comment: comment, post: @post } %>
+              <% end %>
+              <%= render partial: 'comments/comment_form', locals: { post: @post } %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-<% end %>
+</div>

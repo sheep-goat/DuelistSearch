@@ -168,6 +168,31 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="acts-as-taggable-on (vbundled(6.0.0)) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="4" />
+        </properties>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/acts-as-taggable-on-6.0.0/db" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/acts-as-taggable-on-6.0.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/acts-as-taggable-on-6.0.0/spec" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/acts-as-taggable-on-6.0.0/gemfiles" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/acts-as-taggable-on-6.0.0/db" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/acts-as-taggable-on-6.0.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/acts-as-taggable-on-6.0.0/spec" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/acts-as-taggable-on-6.0.0/gemfiles" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/acts-as-taggable-on-6.0.0/db" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/acts-as-taggable-on-6.0.0/spec" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/acts-as-taggable-on-6.0.0/gemfiles" />
+        </excluded>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="arel (vbundled(9.0.0)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />

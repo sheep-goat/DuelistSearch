@@ -1,13 +1,13 @@
 <div class="part-link">
   <% if current_user.participators.find_by(post_id: post.id) %>
-    <%= link_to 'LEAVE', leave_path(current_user.username, post.id),
-                method: :delete, remote: true, data: { confirm: 'この対戦への参加をキャンセルします。よろしいですか?' } %>
+    <%= link_to leave_path(current_user.username, post.id), method: :delete, remote: true, data: { confirm: 'この対戦への参加をキャンセルします。よろしいですか?' } do %>
+      <i class="fas fa-sign-in-alt"></i>
+      <span class="leave">参加希望を取り消す</span>
+    <% end %>
   <% else %>
-    <%= link_to 'JOIN', join_path(current_user.username,post.id),
-                method: :post, remote: true, data: { confirm: 'この対戦に参加します。よろしいですか?' } %>
+    <%= link_to join_path(current_user.username,post.id), method: :post, remote: true, data: { confirm: 'この対戦に参加します。よろしいですか?' } do %>
+      <i class="fas fa-sign-out-alt"></i>
+      <span class="leave">参加を希望する</span>
+    <% end %>
   <% end %>
-  <div class="total-parts">
-    <span class="parts-count"><%= @total_parts %></span>
-    <span class="parts-unit">人</span>
-  </div>
 </div>
