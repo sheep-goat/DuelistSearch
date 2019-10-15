@@ -193,13 +193,60 @@
 #post-details {
   #post-details-inner {
     #post-details-header {
-      margin: 20px 0;
-      background-color: #DDD;
-      .title {
-        font-size: 25px;
-        font-weight: bold;
-        color: #303030;
-        margin: 5px 0 0 10px;
+      .header-inner {
+        margin: 10px 0;
+        background-color: #DDD;
+        padding: 10px 10px 0 10px;
+        border-radius: 10px;
+        .main {
+          background: #FFF;
+          .title {
+            font-size: 25px;
+            font-weight: bold;
+            color: #303030;
+            background: #FFF;
+            padding: 5px 10px 0 10px;
+          }
+          .game-title {
+            font-size: 14px;
+            color: #505050;
+            padding: 0 10px 5px 10px;
+          }
+        }
+        .sub {
+          display: flex;
+          justify-content: space-between;
+          margin: 15px;
+          .host {
+            display: flex;
+            width: fit-content;
+            .host-icon img {
+              width: 25px;
+              height: 25px;
+              border-radius: 50px;
+            }
+            .username { padding: 0 5px; }
+          }
+          .particip-box {
+            width: 150px;
+            border: 1px solid #CCC;
+            border-radius: 5px;
+            font-size: 13px;
+            padding: 5px 0;
+            background: #FFF;
+            margin-bottom: 5px;
+            .part-title {
+              padding: 5px 10px;
+              border-radius: 5px;
+              color: #555;
+              background-color: #ffefd5;
+            }
+            .part-count {
+              float: right;
+              padding-right: 7px;
+            }
+          }
+        }
       }
     }
     #post-details-contents {
