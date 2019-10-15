@@ -6,7 +6,9 @@
     </div>
     <div id="post-details-contents">
       <div class="details-content-inner">
-        <h3 class="sub-title"><%= t('post.show.sub-title.basic') %></h3>
+        <div class="caption">
+          <h3 class="sub-title"><%= t('post.show.sub-title.basic') %></h3>
+        </div>
         <div class="block">
           <div class="post-image">
             <% if @post.image_path.url.present? %>
@@ -50,7 +52,9 @@
         </div>
         <div class="block">
           <div class="post-desc">
-            <h3 class="sub-title"><%= t('post.show.sub-title.desc') %></h3>
+            <div class="caption">
+              <h3 class="sub-title"><%= t('post.show.sub-title.desc') %></h3>
+            </div>
             <div class="desc"><%= @post.desc %></div>
           </div>
         </div>
@@ -61,7 +65,9 @@
         </div>
         <div class="block">
           <div class="comment">
-            <h3 class="sub-title"><%= t('post.show.sub-title.comment') %></h3>
+            <div class="caption">
+              <h3 class="sub-title"><%= t('post.show.sub-title.comment') %></h3>
+            </div>
             <div class="comment-content">
               <% @comments.each do |comment| %>
                 <%= render partial: 'comments/comment_balloon', locals: { comment: comment, post: @post } %>

@@ -203,8 +203,16 @@
       }
     }
     #post-details-contents {
-      h3 {
-        font-size: 18px;
+      .caption {
+        padding: 15px 0;
+        h3 {
+          font-size: 17px;
+          font-weight: bold;
+          padding: 4px 10px;
+          color: #494949;
+          background: transparent;
+          border-left: solid 5px #7db4e6;
+        }
       }
       .details-content-inner {
         padding: 0 20px;
