@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :require_login
   PAGE_PER = 15
   def new
     @post = Post.new()
