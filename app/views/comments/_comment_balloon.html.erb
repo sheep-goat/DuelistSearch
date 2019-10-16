@@ -12,6 +12,7 @@
           <% if comment.user.image_path.url.present? %>
             <%= image_tag comment.user.image_path.url %>
           <% else %>
+            <i class="fas fa-user"></i>
           <% end %>
         <% end %>
       </div>
