@@ -227,23 +227,26 @@
             }
             .username { padding: 0 5px; }
           }
-          .particip-box {
-            width: 150px;
-            border: 1px solid #CCC;
-            border-radius: 5px;
-            font-size: 13px;
-            padding: 5px 0;
-            background: #FFF;
-            margin-bottom: 5px;
-            .part-title {
-              padding: 5px 10px;
+          .sub-boxes {
+            display: flex;
+            .particip-box, .comment-box {
+              width: 150px;
+              border: 1px solid #CCC;
               border-radius: 5px;
-              color: #555;
-              background-color: #ffefd5;
-            }
-            .part-count {
-              float: right;
-              padding-right: 7px;
+              font-size: 13px;
+              padding: 5px 0;
+              background: #FFF;
+              margin: 0 3px 5px 3px;
+              .part-title, .comment-title {
+                padding: 5px 10px;
+                border-radius: 5px;
+                color: #555;
+                background-color: #ffefd5;
+              }
+              .part-count, .comment-count {
+                float: right;
+                padding-right: 7px;
+              }
             }
           }
         }
