@@ -275,7 +275,7 @@
           }
         }
         .summary {
-          margin: 20px 30px;
+          margin: 0 30px;
           table {
             border-collapse: collapse;
             color: #626855;
@@ -310,7 +310,7 @@
         }
         .post-desc {
           .desc {
-            width: 630px;
+            width: 850px;
             font-size: 14px;
             color: #505050;
             background: #fff5ee;
@@ -320,7 +320,7 @@
           }
         }
         .participator-button {
-          width: 630px;
+          width: 850px;
           text-align: center;
           margin: 15px 0;
           a {
@@ -352,10 +352,11 @@
               font-size: 1.4em;
               color: #505050;
               border-radius: 50px;
+              padding-top: 10px;
             }
             .main {
               position: relative;
-              width: 450px;
+              width: 630px;
               display: inline-block;
               margin: 0 20px 40px 20px;
               padding: 7px 10px;
@@ -399,11 +400,11 @@
           }
           .comment-form {
             .message textarea {
-              width: 630px;
+              width: 850px;
               height: 100px;
             }
             .button input {
-              width: 630px;
+              width: 850px;
               font-size: 14px;
               color: #FFF;
               background: #AAA;
