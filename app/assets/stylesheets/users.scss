@@ -109,3 +109,15 @@
     }
   }
 }
+
+#follow-status {
+  display: flex;
+  width: fit-content;
+  font-size: 14px;
+  color: #303030;
+  margin: 0 auto;
+  .following, .follower {
+    padding: 0 4px;
+    .count { font-weight: bold; }
+  }
+}

@@ -8,6 +8,10 @@ class User < ApplicationRecord
   has_many :fav_posts, through: :favorites, source: :post
   has_many :participators
   has_many :posts, through: :participators
+  has_many :active_relationships, class_name: "Relationship", foreign_key: :follower_id, dependent: :destroy
+  has_many :passive_relationships, class_name: "Relationship", foreign_key: :following_id, dependent: :destroy
+  has_many :followings, through: :active_relationships
+  has_many :followers, through: :passive_relationships
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/
   VALID_USERNAME_REGEX = /\A[a-zA-Z_][a-zA-Z0-9_]+\z/
@@ -21,4 +25,16 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 8 }, confirmation: true, on: :create
   validates :area, length: { maximum: 50 }
   validates :profile, length: { maximum: 254 }
+
+  def follow(other_user)
+    active_relationships.create(following_id: other_user.id)
+  end
+
+  def unfollow(other_user)
+    active_relationships.find_by(following_id: other_user.id).destroy
+  end
+
+  def following?(other_user)
+    followings.include?(other_user)
+  end
 end
