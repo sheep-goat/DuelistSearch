@@ -98,3 +98,13 @@ label {
 .voluntary_entry {
   background: #7C7C7C;
 }
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  font-size: 12px;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-size: 12px;
+}
+::placeholder{ /* Others */
+  font-size: 12px;
+}

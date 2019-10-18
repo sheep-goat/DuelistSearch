@@ -20,6 +20,25 @@ ja:
       title: "新規登録"
     edit:
       title: "プロフィールの編集"
+    form:
+      title:
+        username: 'ユーザID'
+        nickname: 'ニックネーム'
+        email: 'メールアドレス'
+        age: '年齢'
+        gender: '性別'
+        area: '地域'
+        profile: '自己紹介'
+        password: 'パスワード'
+        password_confirm: 'パスワード(確認)'
+      placeholder:
+        username: '3文字以上 20文字まで'
+        nickname: '20文字まで'
+        email: '受信可能なメールアドレスを入力してください'
+        area: '20文字まで'
+        profile: '254文字まで'
+        password: '英数字 8文字以上'
+        password_confirm: 'もう1度パスワードを入力してください'
   search:
     area: "エリアから探す"
     game: "ゲームタイトルから探す"

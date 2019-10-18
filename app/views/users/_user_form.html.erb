@@ -13,63 +13,63 @@
   <div id="user-text-boxes">
     <div class="username">
       <%= form.label :username do %>
-        <span class="form-title">ユーザID</span>
+        <span class="form-title"><%= t('user.form.title.username') %></span>
         <span class="require_entry"><%= t('form.require') %></span>
       <% end %>
-      <%= form.text_field :username %>
+      <%= form.text_field :username, placeholder: t('user.form.placeholder.username') %>
     </div>
     <div class="nickname">
       <%= form.label :nickname do %>
-        <span class="form-title">ニックネーム</span>
+        <span class="form-title"><%= t('user.form.title.nickname') %></span>
         <span class="require_entry"><%= t('form.require') %></span>
       <% end %>
-      <%= form.text_field :nickname %>
+      <%= form.text_field :nickname, placeholder: t('user.form.placeholder.nickname') %>
     </div>
     <div class="email">
       <%= form.label :email do %>
-        <span class="form-title">メールアドレス</span>
+        <span class="form-title"><%= t('user.form.title.email') %></span>
         <span class="require_entry"><%= t('form.require') %></span>
       <% end %>
-      <%= form.text_field :email %>
+      <%= form.text_field :email, placeholder: t('user.form.placeholder.email') %>
     </div>
     <div class="age">
       <%= form.label :age do %>
-        <span class="form-title">年齢</span>
+        <span class="form-title"><%= t('user.form.title.age') %></span>
         <span class="require_entry"><%= t('form.require') %></span>
       <% end %>
       <%= form.select :age, ["10代", "20代", "30代", "40代", "50代", "60代以上", "その他"], :prompt => "選択してください" %>
     </div>
     <div class="gender">
       <%= form.label :gender do %>
-        <span class="form-title">性別</span>
+        <span class="form-title"><%= t('user.form.title.gender') %></span>
         <span class="require_entry"><%= t('form.require') %></span>
       <% end %>
       <%= form.select :gender, ["男性", "女性", "その他", "無回答"], :prompt => "選択してください" %>
     </div>
     <div class="area">
       <%= form.label :area do %>
-        <span class="form-title">地域</span>
+        <span class="form-title"><%= t('user.form.title.area') %></span>
         <span class="voluntary_entry"><%= t('form.voluntary') %></span>
       <% end %>
-      <%= form.text_field :area %>
+      <%= form.text_field :area, placeholder: t('user.form.placeholder.area') %>
     </div>
     <div class="profile">
       <%= form.label :profile do %>
-        <span class="form-title">自己紹介</span>
+        <span class="form-title"><%= t('user.form.title.profile') %></span>
         <span class="voluntary_entry"><%= t('form.voluntary') %></span>
       <% end %>
-      <%= form.text_area :profile %>
+      <%= form.text_area :profile, placeholder: t('user.form.placeholder.profile') %>
     </div>
     <% if action == 'create' %>
       <div class="password">
-        <%= form.label :password, "パスワード" %>
+        <%= form.label :password, t('user.form.title.password') %>
         <div class="require_entry"><%= t('form.require') %></div>
-        <%= form.password_field :password %>
+        <%= form.password_field :password, placeholder: t('user.form.placeholder.password') %>
       </div>
       <div class="password_comfirm">
-        <%= form.label :password_confirmation, "パスワード(確認)" %>
+        <%= form.label :password_confirmation, t('user.form.title.password_confirm') %>
         <div class="require_entry"><%= t('form.require') %></div>
-        <%= form.password_field :password_confirmation %>
+        <%= form.password_field :password_confirmation, placeholder: t('user.form.placeholder.password_confirm') %>
       </div>
     <% end %>
   </div>
