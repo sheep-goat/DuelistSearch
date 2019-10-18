@@ -121,3 +121,24 @@
     .count { font-weight: bold; }
   }
 }
+
+#follow-form {
+  input {
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 13px;
+    padding: 3px 5px;
+    box-shadow: 2px 2px 4px #DDD;
+    margin-top: 3px;
+  }
+  input.follow-button {
+    color: #00bfff;
+    background: #FFF;
+    border: 1px solid #00bfff;
+  }
+  input.unfollow-button {
+    color: #FFF;
+    background: #00bfff;
+    border: 1px solid #00bfff;
+  }
+}
