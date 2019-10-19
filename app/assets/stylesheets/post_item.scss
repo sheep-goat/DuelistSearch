@@ -1,8 +1,9 @@
 .post-list-item {
   width: 600px;
-  background-color: #FFF;
   border-top: 1px solid #CCC;
 }
+.post-list-item.recruting { background: #FFF; }
+.post-list-item.expired { background: #EEE; }
 
 .list-item-inner {
   padding: 20px 30px;
@@ -55,6 +56,26 @@
   .item-main {
     display: flex;
     .post-image {
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+      .caption {
+        display: inline;
+        span {
+          position: absolute;
+          display: inline-block;
+          top: 10px;
+          left: -40px;
+          width: 100px;
+          padding: 2px 10px;
+          color: #FFF;
+          font-size: 14px;
+          text-align: center;
+          transform: rotate(-45deg);
+        }
+        .recruting { background: #CC0C0C; }
+        .expired { background: #777 }
+      }
       img {
         height: 120px;
         width: 120px;

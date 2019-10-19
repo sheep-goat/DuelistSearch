@@ -1,4 +1,4 @@
-<div class="post-list-item">
+<div class="post-list-item <%= deadline(post.schedule_date) %>">
   <div class="list-item-inner">
     <div class="item-header">
       <div class="header-main">
@@ -37,6 +37,13 @@
         <% else %>
           <%= image_tag 'post_no_image.png' %>
         <% end %>
+        <div class="caption">
+          <% if expired?(post.schedule_date) %>
+            <span class="<%= deadline(post.schedule_date) %>">終了</span>
+          <% else %>
+            <span class="<%= deadline(post.schedule_date) %>">募集中</span>
+          <% end %>
+        </div>
       </div>
       <div class="post-details">
         <div class="game-title">
