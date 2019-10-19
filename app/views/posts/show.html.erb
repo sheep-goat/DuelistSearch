@@ -36,7 +36,7 @@
           <h3 class="sub-title"><%= t('post.show.sub-title.basic') %></h3>
         </div>
         <div class="block">
-          <div class="post-image">
+          <div class="post-image display-post-image">
             <% if @post.image_path.url.present? %>
               <%= image_tag @post.image_path.url %>
             <% else %>
