@@ -18,8 +18,5 @@ class Post < ApplicationRecord
   validates :max_participant, numericality: { only_integer: true, greater_than: 0 }
 
   scope :paginate, -> (params_page) { page(params_page).per(PAGE_PER) }
-
-  def self.latest_record
-    Post.order(created_at: :desc)
-  end
+  scope :latest_record, -> { order(created_at: :desc) }
 end
