@@ -5,7 +5,9 @@
   <% else %>
     <div class="posts-frame">
       <div class="posts-frame-inner">
-        <div class="posts-header"></div>
+        <div class="posts-header">
+          <%= render partial: 'posts/post_list_header', locals: { post: @post } %>
+        </div>
         <div class="posts-list">
           <div class="post-list-inner">
             <% @post.each do |post| %>
