@@ -13,7 +13,8 @@ class Post < ApplicationRecord
 
   validates :user_id, presence: true
   validates :game_id, presence: true
-  validates :title, presence: true, length: { minimum: 3, maximum: 50 }
+  validates :title, presence: true, length: { minimum: 3, maximum: 30 }
+  validates :location, length: { maximum: 30 }
   validates :schedule_date, presence: true
   validates :max_participant, numericality: { only_integer: true, greater_than: 0 }
 

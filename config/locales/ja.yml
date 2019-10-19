@@ -53,6 +53,22 @@ ja:
         location: "開催場所"
         max: "募集人数"
         tag_list: "タグ"
+    form:
+      title:
+        title: "タイトル"
+        desc: "説明"
+        game: "ゲーム"
+        schedule: "日時"
+        prefecture: "場所"
+        location: "会場"
+        participant: "募集人数"
+        tag: "タグ"
+      placeholder:
+        title: "3文字以上 30文字まで"
+        desc: ""
+        location: "30文字まで"
+        participant: "半角数字で入力してください"
+        tag: "複数入力するときは区切り文字(,)を入力してください"
   date:
     abbr_day_names:
       - 日
