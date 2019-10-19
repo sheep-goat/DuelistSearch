@@ -26,7 +26,7 @@ class PostsController < ApplicationController
   def search
     @game_list = Game.all
     query = request.query_parameters
-    @post = Post.latest_record.page(params[:page]).per(PAGE_PER)
+    @post = Post.latest_record.paginate(params[:page])
     unless query[:prefecture_id].nil?
       @post = Post.where(prefecture_id: query[:prefecture_id]).page(params[:page]).per(PAGE_PER)
     end
@@ -34,7 +34,7 @@ class PostsController < ApplicationController
 
   def tag
     @game_list = Game.all
-    @post = Post.tagged_with(params[:tag_name]).page(params[:page]).per(PAGE_PER) if params[:tag_name]
+    @post = Post.tagged_with(params[:tag_name]).paginate(params[:page]) if params[:tag_name]
     render action: :search
   end
 
