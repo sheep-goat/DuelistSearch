@@ -64,7 +64,7 @@
                 <th class="key"><%= t('post.show.key.tag_list') %></th>
                 <td class="value">
                   <% @post.tag_list.each do |tag| %>
-                    <span class="tag"><%= link_to tag, posts_search_path(tag_name: tag) %></span>
+                    <span class="tag"><%= link_to tag, posts_tag_path(tag_name: tag) %></span>
                   <% end %>
                 </td>
               </tr>

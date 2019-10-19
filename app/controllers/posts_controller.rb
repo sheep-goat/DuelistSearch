@@ -32,6 +32,12 @@ class PostsController < ApplicationController
     end
   end
 
+  def tag
+    @game_list = Game.all
+    @post = Post.tagged_with(params[:tag_name]).page(params[:page]).per(PAGE_PER) if params[:tag_name]
+    render action: :search
+  end
+
   private
 
   def post_param
