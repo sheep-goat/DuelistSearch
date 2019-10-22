@@ -1,0 +1,9 @@
+<div id="assessment-panel">
+  <div class="assessment-panel-inner">
+    <div class="user-icon">
+      <% if post.user.image_path.url.present? %>
+        <%= image_tag post.user.image_path.url %>
+      <% end %>
+    </div>
+  </div>
+</div>
