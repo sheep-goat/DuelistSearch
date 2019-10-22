@@ -1,35 +1,6 @@
 <div id="post-details">
   <div id="post-details-inner">
-    <div id="post-details-header">
-      <div class="header-inner">
-        <div class="main">
-          <h2 class="title"><%= @post.title %></h2>
-          <div class="game-title"><%= @post.game.title %></div>
-        </div>
-        <div class="sub">
-          <%= link_to user_show_path(@post.user.username) do %>
-            <div class="host">
-              <div class="host-icon">
-                <% if @post.user.image_path.url.present? %>
-                  <%= image_tag @post.user.image_path.url %>
-                <% end %>
-              </div>
-              <div class="username"><%= @post.user.username %></div>
-            </div>
-          <% end %>
-          <div class="sub-boxes">
-            <div class="particip-box">
-              <span class="part-title">現在の参加数</span>
-              <span class="part-count"><%= @post.participators.count %></span>
-            </div>
-            <div class="comment-box">
-              <span class="comment-title">コメント数</span>
-              <span class="comment-count"><%= @post.comments.count %>件</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <%= render partial: 'posts/header', locals: { post: @post } %>
     <div id="post-details-contents">
       <div class="details-content-inner">
         <div class="caption">

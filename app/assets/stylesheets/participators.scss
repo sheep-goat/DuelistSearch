@@ -1,3 +1,39 @@
 // Place all the styles related to the Participators controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#assess {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.grade {
+  display: flex;
+  margin: 15px 0;
+}
+
+.radio-inline {
+  display: flex;
+  margin: 0 5px;
+  input {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    margin-top: 6px;
+  }
+  label {
+    font-size: 17px;
+    color: #505050;
+    padding: 0 7px;
+  }
+}
+
+.fa-grin-squint { color: #FA8072; }
+.fa-meh-blank { color: #FFD700; }
+.fa-sad-tear { color: #4169E1; }
+
+.assess-comment {
+  textarea {
+    width: 500px;
+    height: 100px;
+    font-size: 15px;
+  }
+}
