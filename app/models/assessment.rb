@@ -1,6 +1,5 @@
 class Assessment < ApplicationRecord
-  belongs_to :participator
-
-  validates :participator_id, presence: true, uniqueness: true
+  validates :user_id, presence: true
+  validates :post_id, presence: true
   validates :grade, presence: true
 end

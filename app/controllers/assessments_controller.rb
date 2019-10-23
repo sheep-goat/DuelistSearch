@@ -8,12 +8,19 @@ class AssessmentsController < ApplicationController
     participator = Participator.where(user_id: current_user.id).where(post_id: params[:id].to_i)
     if participator.present?
       @assessment = Assessment.new(assessment_param)
-      @assessment.participator_id = participator[0].id
+      @assessment.user_id = current_user.id
+      @assessment.post_id = params[:id].to_i
       if @assessment.save
         redirect_to root_path
       else
         redirect_to assess_path(params[:id])
       end
     end
+  end
+
+  private
+
+  def assessment_param
+    params.require(:assessment).permit(:grade, :comment)
   end
 end

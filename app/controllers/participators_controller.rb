@@ -10,10 +10,4 @@ class ParticipatorsController < ApplicationController
     part.destroy
     @total_parts = Participator.where(post_id: params[:id]).count
   end
-
-  private
-
-  def assessment_param
-    params.require(:assessment).permit(:grade, :comment)
-  end
 end
