@@ -37,3 +37,22 @@
     font-size: 15px;
   }
 }
+
+#assessment-panel .assessment-panel-inner {
+  width: 200px;
+  padding: 20px 0;
+  background: #FFF;
+  .username { text-align: center; }
+  .assessments {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.assessment-inline {
+  margin: 5px;
+  .count {
+    font-size: 14px;
+    color: #303030;
+  }
+}
