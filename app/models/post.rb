@@ -6,6 +6,7 @@ class Post < ApplicationRecord
   belongs_to :user
   belongs_to :game
   belongs_to :prefecture
+  has_many :assessments
   has_many :favorites, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :participators, dependent: :delete_all

@@ -5,8 +5,7 @@ class AssessmentsController < ApplicationController
   end
 
   def create
-    participator = Participator.where(user_id: current_user.id).where(post_id: params[:id].to_i)
-    if participator.present?
+    if Participator.join?
       @assessment = Assessment.new(assessment_param)
       @assessment.user_id = current_user.id
       @assessment.post_id = params[:id].to_i

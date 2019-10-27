@@ -18,6 +18,18 @@
   }
 }
 
+.user-icon.circle-medium {
+  text-align: center;
+  img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: solid 2px #AAA;
+    padding: 4px;
+  }
+}
+
 #user-text-boxes {
   margin-left: 450px;
   margin-top: 30px;

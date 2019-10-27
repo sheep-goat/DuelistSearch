@@ -17,8 +17,9 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @fav_users = Favorite.where(post_id: params[:id]).count
-    @total_parts = Participator.where(post_id: params[:id]).count
+    @assessments = @post.user.assessments.count_grade
+    @fav_users = @post.favorites.count
+    @total_parts = @post.participators.count
     @comments = @post.comments
     @comment = Comment.new
   end

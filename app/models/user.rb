@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :comments
   has_many :fav_posts, through: :favorites, source: :post
   has_many :participators
+  has_many :assessments
   has_many :posts, through: :participators
   has_many :active_relationships, class_name: "Relationship", foreign_key: :follower_id, dependent: :destroy
   has_many :passive_relationships, class_name: "Relationship", foreign_key: :following_id, dependent: :destroy
