@@ -1,0 +1,156 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#user-info-boxes {
+  margin-left: 50px;
+  width: 300px;
+  height: 700px;
+  float: left;
+  .user-icon {
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border:solid 2px #AAA;
+      padding:4px;
+    }
+  }
+}
+
+.user-icon.circle-medium {
+  text-align: center;
+  img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: solid 2px #AAA;
+    padding: 4px;
+  }
+}
+
+#user-text-boxes {
+  margin-left: 450px;
+  margin-top: 30px;
+  input, select, textarea {
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 13px;
+    width: 400px;
+  }
+  select {
+    width: 200px;
+  }
+
+  .age {
+    float: left;
+    margin-right: 15px;
+  }
+  .profile textarea {
+    height: 100px;
+  }
+}
+
+.user-button {
+  text-align: right;
+  margin-right: 80px;
+  input {
+    width: 100px;
+    height: 40px;
+    color: #FFF;
+   background: #4169E1;
+  }
+  input:hover, input:active {
+    background: #2d2de0
+  }
+}
+
+#user-contents-inner {
+  display: flex;
+}
+
+#profile-panel {
+  margin: 10px;
+  .profile-panel-inner {
+    width: 250px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #FFF;
+    .user-icon {
+      text-align: center;
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: solid 2px #AAA;
+        padding: 4px;
+      }
+    }
+    .user-info {
+      text-align: center;
+      .name {
+        .nickname {
+          font-size: 20px;
+          height: 23px;
+          font-weight: bold;
+        }
+        .username a {
+          font-size: 13px;
+          color: #999;
+          text-decoration: none;
+        }
+      }
+    }
+    .profile {
+      margin: 10px 0;
+      font-size: 13px;
+    }
+    .user-subinfo {
+      color: #999;
+      font-size: 13px;
+      .age, .gender {
+        padding: 5px;
+      }
+    }
+    .area {
+      color: #999;
+      font-size: 13px;
+      margin: 2px;
+    }
+  }
+}
+
+#follow-status {
+  display: flex;
+  width: fit-content;
+  font-size: 14px;
+  color: #303030;
+  margin: 0 auto;
+  .following, .follower {
+    padding: 0 4px;
+    .count { font-weight: bold; }
+  }
+}
+
+#follow-form {
+  input {
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 13px;
+    padding: 3px 5px;
+    box-shadow: 2px 2px 4px #DDD;
+    margin-top: 3px;
+  }
+  input.follow-button {
+    color: #00bfff;
+    background: #FFF;
+    border: 1px solid #00bfff;
+  }
+  input.unfollow-button {
+    color: #FFF;
+    background: #00bfff;
+    border: 1px solid #00bfff;
+  }
+}

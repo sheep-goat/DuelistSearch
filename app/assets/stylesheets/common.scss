@@ -1,0 +1,110 @@
+body {
+  font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+  background: #FAFAFA
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  background: -moz-linear-gradient(left, #6A5ACD 10%, #CC99FF, #E9967A);
+  background: -webkit-linear-gradient(left, #6A5ACD 10%, #CC99FF, #E9967A);
+  background: linear-gradient(to right,  #6A5ACD 10%, #CC99FF, #E9967A);
+}
+
+h1 {
+  width: 50%;
+  float: left;
+}
+
+#gnav {
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    padding-right: 50px;
+  }
+  li a {
+    color: #EEEEEE;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+  }
+  li:after {
+    content: '|';
+    color: #EEEEEE;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  li:last-child:after {
+    content: '';
+    padding-left: 0px;
+  }
+}
+
+.wrapper {
+  width: 950px;
+  margin: 0 auto;
+}
+
+.post-panel {
+  width: 150px;
+  float: left;
+  padding: 0 10px;
+  .post-panel-inner {
+    box-shadow: 2px 2px 4px #DDD;
+    a { text-decoration: none; }
+    .panel-image {
+      margin: 0 auto;
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        background-color: #EEE;
+      }
+    }
+    .panel-title {
+      height: 50px;
+      background-color: #FFF;
+      font-size: 13px;
+      color: #303030;
+      text-decoration: none;
+      padding: 10px;
+    }
+  }
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+.require_entry,
+.voluntary_entry {
+  width: fit-content;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  color: #FFF;
+  padding: 0 10px;
+  margin-left: 10px;
+}
+.require_entry {
+  background: #FF0000;
+}
+.voluntary_entry {
+  background: #7C7C7C;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  font-size: 12px;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-size: 12px;
+}
+::placeholder{ /* Others */
+  font-size: 12px;
+}

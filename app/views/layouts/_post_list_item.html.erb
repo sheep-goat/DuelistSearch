@@ -1,0 +1,62 @@
+<div class="post-list-item <%= deadline(post.schedule_date) %>">
+  <div class="list-item-inner">
+    <div class="item-header">
+      <div class="header-main">
+        <div class="title"><%= link_to post.title, post_show_path(username, post.id) %></div>
+        <div class="host-userinfo">
+          <span class="host-nickname"><%= post.user.nickname %></span>
+          <span class="host-username">(@<%= username %>)</span>
+        </div>
+      </div>
+      <div class="item-boxes">
+        <% if current_user.favorites.find_by(post_id: post.id) %>
+          <%= link_to unfavorite_path(current_user.username, post.id), method: :delete, remote: true do %>
+            <div class="faved-box">
+              <i class="fas fa-check"></i>
+              <span class="fav-title">気になる！</span>
+            </div>
+          <% end %>
+        <% else %>
+          <%= link_to favorite_path(current_user.username,post.id), method: :post, remote: true do %>
+            <div class="fav-box">
+              <i class="far fa-heart"></i>
+              <span class="fav-title">気になる！</span>
+            </div>
+          <% end %>
+        <% end %>
+        <div class="particip-box">
+          <span class="part-title">現在の参加数</span>
+          <span class="part-count"><%= post.participators.count %></span>
+        </div>
+      </div>
+    </div>
+    <div class="item-main">
+      <div class="post-image display-post-image-mini">
+        <% if post.image_path.url.present? %>
+          <%= image_tag post.image_path.url %>
+        <% else %>
+          <%= image_tag 'post_no_image.png' %>
+        <% end %>
+        <div class="caption">
+          <% if expired?(post.schedule_date) %>
+            <span class="<%= deadline(post.schedule_date) %>">終了</span>
+          <% else %>
+            <span class="<%= deadline(post.schedule_date) %>">募集中</span>
+          <% end %>
+        </div>
+      </div>
+      <div class="post-details">
+        <div class="game-title">
+          <span class="value"><%= post.game.title %></span>
+        </div>
+        <div class="schedule-date">
+          <span class="key">開催予定日：</span>
+          <span class="value"><%= post.schedule_date %></span>
+        </div>
+        <div class="venue">
+          <span class="value"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

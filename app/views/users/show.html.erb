@@ -1,0 +1,21 @@
+<div id="user-contents-inner">
+  <%= render partial: 'users/profile_panel', locals: { user: @user } %>
+  <% if @post.empty? %>
+    <span>Empty.</span>
+  <% else %>
+    <div class="posts-frame">
+      <div class="posts-frame-inner">
+        <div class="posts-header">
+          <%= render partial: 'posts/post_list_header', locals: { post: @post } %>
+        </div>
+        <div class="posts-list">
+          <div class="post-list-inner">
+            <% @post.each do |post| %>
+              <%= render partial: 'layouts/post_list_item', locals: { post: post, username: @user.username } %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

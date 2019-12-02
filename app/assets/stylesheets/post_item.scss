@@ -1,0 +1,65 @@
+.post-list-item {
+  width: 600px;
+  border-top: 1px solid #CCC;
+}
+.post-list-item.recruting { background: #FFF; }
+.post-list-item.expired { background: #EEE; }
+
+.list-item-inner {
+  padding: 20px 30px;
+  .item-header {
+    display: flex;
+    height: fit-content;
+    padding-bottom: 20px;
+    .header-main {
+      width: 500px;
+      .title a { font-size: 20px; }
+      .host-userinfo {
+        font-size: 15px;
+        color: #555;
+        margin-left: 5px;
+      }
+    }
+
+    .item-boxes {
+      .fav-box, .faved-box, .particip-box {
+        width: 150px;
+        border: 1px solid #CCC;
+        border-radius: 5px;
+        font-size: 13px;
+        padding: 5px 0;
+      }
+      .fav-box, .faved-box {
+        text-align: center;
+        color: #FFF;
+        margin-bottom: 5px;
+        .fa-heart { color: #B22222; }
+        .fa-check { color: #808080; }
+      }
+      .fav-box { background-color: #FFA500; }
+      .faved-box { background-color: #B0C4DE; }
+      .particip-box {
+        .part-title {
+          padding: 5px 10px;
+          color: #555;
+          background-color: #DDD;
+        }
+        .part-count {
+          float: right;
+          padding-right: 7px;
+        }
+      }
+      a { text-decoration: none; }
+    }
+  }
+
+  .item-main {
+    display: flex;
+    .post-details {
+      font-size: 15px;
+      color: #555;
+      padding: 10px 30px;
+      .game-title .value { color: #FA8072; }
+    }
+  }
+}

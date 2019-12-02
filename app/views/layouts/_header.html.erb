@@ -1,0 +1,46 @@
+<header>
+  <h1 class="site-logo"></h1>
+  <nav id="gnav">
+    <ul id="gnav-menu">
+      <% if logged_in? %>
+        <li class="item" id="post-link">
+          <%= link_to posts_new_path do %>
+            <i class="fas fa-bullhorn"></i>
+            <span><%= t('header.create_post') %></span>
+          <% end %>
+        </li>
+        <li class="item" id="search-link">
+          <%= link_to posts_search_path do %>
+            <i class="fas fa-search"></i>
+            <span><%= t('header.search') %></span>
+          <% end %>
+        </li>
+        <li class="item" id="logout-link">
+          <%= link_to logout_path, method: :delete do %>
+            <i class="fas fa-sign-out-alt"></i>
+            <span><%= t('header.logout') %></span>
+          <% end %>
+        </li>
+      <% else %>
+        <li class="item" id="search-link">
+          <%= link_to posts_search_path do %>
+            <i class="fas fa-search"></i>
+            <span><%= t('header.search') %></span>
+          <% end %>
+        </li>
+        <li class="item" id="login-link">
+          <%= link_to login_path do %>
+            <i class="fas fa-sign-in-alt"></i>
+            <span><%= t('header.login') %></span>
+          <% end %>
+        </li>
+        <li class="item" id="signup-link">
+          <%= link_to signup_path, data: {"turbolinks" => false} do %>
+            <i class="fas fa-user-plus"></i>
+            <span><%= t('header.sighup') %></span>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</header>

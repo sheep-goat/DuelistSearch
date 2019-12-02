@@ -1,0 +1,24 @@
+nav.pagination {
+  .prev, .next {
+    margin: 10px;
+  }
+  .page, .page.current {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+    font-size: 12px;
+    a { text-decoration: none; }
+  }
+  .page {
+    border: 0.8px solid #AAA;
+  }
+  .page.current {
+    background-color: #F6E2D1;
+    border: 0.8px solid #555;
+    a { font-weight: bold; }
+  }
+  .first-page i, .last-page i {
+    display: none;
+  }
+
+}

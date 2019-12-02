@@ -1,0 +1,15 @@
+<div class="fav-link" id="fav-link-<%= post.id %>">
+  <% if current_user.favorites.find_by(post_id: post.id) %>
+    <%= link_to unfavorite_path(current_user.username, post.id), method: :delete, remote: true do %>
+      <i class="fas fa-heart"></i>
+      <span class="favs-count"><%= @fav_users %></span>
+      <span class="favs-unit">件のおきにいり</span>
+    <% end %>
+  <% else %>
+    <%= link_to favorite_path(current_user.username,post.id), method: :post, remote: true do %>
+      <i class="far fa-heart"></i>
+      <span class="favs-count"><%= @fav_users %></span>
+      <span class="favs-unit">件のおきにいり</span>
+    <% end %>
+  <% end %>
+</div>

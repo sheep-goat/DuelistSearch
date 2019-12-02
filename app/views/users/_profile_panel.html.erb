@@ -1,0 +1,38 @@
+<div id="profile-panel">
+  <div class="profile-panel-inner">
+    <div class="user-icon">
+      <% if user.image_path.url.present? %>
+        <%= image_tag user.image_path.url %>
+      <% end %>
+    </div>
+    <div class="user-info">
+      <div class="name">
+        <div class="nickname"><%= user.nickname %></div>
+        <div class="username"><%= link_to "@#{user.username}", user_show_path(user.username) %></div>
+      </div>
+      <%= render partial: 'follow_status', locals: { user: user } %>
+      <%= render partial: 'follow_form', locals: { user: user } %>
+      <% unless user.profile.empty? %>
+        <div class="profile">
+          <span class="user-profile"><%= user.profile %></span>
+        </div>
+      <% end %>
+      <div class="user-subinfo">
+        <span class="age">
+          <i class="fas fa-birthday-cake"></i>
+          <span class="user-age"><%= user.age %></span>
+        </span>
+        <span class="gender">
+          <i class="fas fa-venus-mars"></i>
+          <span class="user-gender"><%= user.gender %></span>
+        </span>
+      </div>
+      <% unless user.area.empty? %>
+        <div class="area">
+          <i class="fas fa-map-marker-alt"></i>
+          <span class="user-area"><%= user.area %></span>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

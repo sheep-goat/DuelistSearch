@@ -24,10 +24,24 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
+# Set default record
+gem 'seed-fu'
+# Use to pagination
+gem 'kaminari', '~> 0.17.0'
+
+# Japanese localization
+gem 'rails-i18n', '~> 5.1'
 
 # Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.8'
+gem 'carrierwave'
+# Use jQuery for .coffee
+gem 'jquery-rails'
+gem 'jquery-turbolinks'
+
+# Use for tag management
+gem 'acts-as-taggable-on', '~> 6.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -38,6 +52,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'simplecov'
 end
 
 group :development do

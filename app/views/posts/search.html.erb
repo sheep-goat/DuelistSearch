@@ -1,0 +1,18 @@
+<div id="seaech-contents">
+  <div id="search-content-inner">
+    <%= render 'search_menus' %>
+    <div class="search-result">
+      <div id="refine-menus">
+        <div class="refine-menus-inner"></div>
+      </div>
+      <div id="posts-list">
+        <div class="post-list-inner">
+          <% @post.each do |post| %>
+            <%= render partial: 'layouts/post_list_item', locals: { post: post, username: post.user.username } %>
+          <% end %>
+          <%= paginate @post %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

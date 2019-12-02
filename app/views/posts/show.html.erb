@@ -1,0 +1,87 @@
+<div id="post-details">
+  <div id="post-details-inner">
+    <%= render partial: 'posts/header', locals: { post: @post } %>
+    <div id="post-details-contents">
+      <div class="details-content-inner">
+        <div class="caption">
+          <h3 class="sub-title"><%= t('post.show.sub-title.basic') %></h3>
+        </div>
+        <div class="block">
+          <div class="post-image display-post-image">
+            <% if @post.image_path.url.present? %>
+              <%= image_tag @post.image_path.url %>
+            <% else %>
+              <%= image_tag 'post_no_image.png' %>
+            <% end %>
+            <div class="caption">
+              <% if expired?(@post.schedule_date) %>
+                <span class="<%= deadline(@post.schedule_date) %>">終了</span>
+              <% else %>
+                <span class="<%= deadline(@post.schedule_date) %>">募集中</span>
+              <% end %>
+            </div>
+          </div>
+          <div class="summary">
+            <table>
+              <tr class="schedule">
+                <th class="key"><%= t('post.show.key.schedule') %></th>
+                <td class="value"><%= format_date(@post.schedule_date) %></td>
+              </tr>
+              <tr class="locations">
+                <th class="key"><%= t('post.show.key.location') %></th>
+                <td class="value">
+                  <div class="prefecture"><%= @post.prefecture.name %></div>
+                  <div class="location"><%= @post.location %></div>
+                </td>
+              </tr>
+              <tr class="max_participant">
+                <th class="key"><%= t('post.show.key.max') %></th>
+                <td class="value"><%= @post.max_participant %></td>
+              </tr>
+              <tr class="tag_list">
+                <th class="key"><%= t('post.show.key.tag_list') %></th>
+                <td class="value">
+                  <% @post.tag_list.each do |tag| %>
+                    <span class="tag"><%= link_to tag, posts_tag_path(tag_name: tag) %></span>
+                  <% end %>
+                </td>
+              </tr>
+            </table>
+            <div class="favorite-button">
+              <%= render partial: 'favorites/favorite_form', :locals => { post: @post } %>
+            </div>
+          </div>
+          <div class="post-user-profile">
+            <%= render partial: 'assessments/assessment_panel', locals: { post: @post } %>
+          </div>
+        </div>
+        <div class="block">
+          <div class="post-desc">
+            <div class="caption">
+              <h3 class="sub-title"><%= t('post.show.sub-title.desc') %></h3>
+            </div>
+            <div class="desc"><%= @post.desc %></div>
+          </div>
+        </div>
+        <div class="block">
+          <div class="participator-button">
+            <%= render partial: 'participators/participator_form', :locals => { post: @post } %>
+          </div>
+        </div>
+        <div class="block">
+          <div class="comment">
+            <div class="caption">
+              <h3 class="sub-title"><%= t('post.show.sub-title.comment') %></h3>
+            </div>
+            <div class="comment-content">
+              <% @comments.each do |comment| %>
+                <%= render partial: 'comments/comment_balloon', locals: { comment: comment, post: @post } %>
+              <% end %>
+              <%= render partial: 'comments/comment_form', locals: { post: @post } %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
