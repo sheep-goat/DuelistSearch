@@ -1,0 +1,29 @@
+<div id="non-login-user-page" class="top-page">
+  <div class="top-wrapper">
+    <div class="block">
+      <div id="login-form">
+        <%= image_tag 'top-image.jpg', class: 'top-image' %>
+        <div class="form">
+          <%= form_with scope: :session, url: login_path do |form| %>
+            <div class="email form-block">
+              <%= form.label :email, "メールアドレス" %>
+              <%= form.text_field :email %>
+            </div>
+
+            <div class="password form-block">
+              <%= form.label :password, "パスワード" %>
+              <%= form.password_field :password %>
+            </div>
+
+            <div class="buttom form-block">
+              <%= form.submit "ログイン" %>
+            </div>
+          <% end %>
+        </div>
+        <div class="signup">
+          <span class="button-name"><%= link_to '新規登録', signup_path, data: {"turbolinks" => false} %></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
