@@ -5,6 +5,39 @@
   margin-top: 10px;
 }
 
+h3.landing-page {
+  position: relative;
+  padding-left: 35px;
+  padding-top: 20px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #17223b;
+}
+
+h3.landing-page:before {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 15px transparent;
+  border-bottom: solid 15px #6b778d;
+}
+h3.landing-page:after {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 10px;
+  width: 90%;
+  border-bottom: solid 3px #6b778d;
+}
+
+.landing-block {
+  margin-top: 15px;
+}
+
 #login-form {
   position: relative;
   display: inline-block;

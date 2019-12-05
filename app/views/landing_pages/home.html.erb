@@ -1,13 +1,11 @@
-<% if logged_in? %>
-  <%= @user.nickname %>
-  <%= link_to 'mypage', user_show_path(@user.username) %>
-  <%= link_to 'logout', logout_path, method: :delete %>
-<% else %>
+<% unless logged_in? %>
   <%= render partial: 'non_login' %>
 <% end %>
 <div id="latest-posts-list">
-  <h3>最新の投稿</h3>
-  <% @latest_posts.each do |post| %>
-    <%= render partial: 'layouts/post_panel', locals: { post: post } %>
-  <% end %>
+  <h3 class="landing-page">最新の投稿</h3>
+  <div class="latest-posts landing-block">
+    <% @latest_posts.each do |post| %>
+      <%= render partial: 'layouts/post_panel', locals: { post: post } %>
+    <% end %>
+  </div>
 </div>
