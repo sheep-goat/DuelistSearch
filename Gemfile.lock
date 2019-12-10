@@ -229,6 +229,7 @@ DEPENDENCIES
   jquery-turbolinks
   kaminari (~> 0.17.0)
   mini_magick (~> 4.8)
+  nokogiri (>= 1.10.3)
   puma (~> 3.11)
   rails (~> 5.2.3)
   rails-i18n (~> 5.1)

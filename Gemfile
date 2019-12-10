@@ -29,6 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'seed-fu'
 # Use to pagination
 gem 'kaminari', '~> 0.17.0'
+gem 'nokogiri', ">= 1.10.3"
 
 # Japanese localization
 gem 'rails-i18n', '~> 5.1'
