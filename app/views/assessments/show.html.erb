@@ -1,0 +1,13 @@
+<div id="assessment-index">
+  <div class="index-inner">
+    <%= render partial: 'users/profile_panel', locals: { user: @user } %>
+    <div class="assessments-frame">
+      <div class="assessments-frame-inner">
+        <div class="assessments-header">
+          <%= render partial: 'assessments/list_header', locals: { assessment: @assessment } %>
+        </div>
+        <%= render partial: 'assessments/assessment_list', locals: { assessments: @assessment } %>
+      </div>
+    </div>
+  </div>
+</div>

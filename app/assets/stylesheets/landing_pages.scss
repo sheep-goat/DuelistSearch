@@ -1,3 +1,111 @@
 // Place all the styles related to the LandingPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#non-login-user-page .top-wrapper {
+  margin-top: 10px;
+}
+
+h3.landing-page {
+  position: relative;
+  padding-left: 35px;
+  padding-top: 20px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #17223b;
+}
+
+h3.landing-page:before {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 15px transparent;
+  border-bottom: solid 15px #6b778d;
+}
+h3.landing-page:after {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 10px;
+  width: 90%;
+  border-bottom: solid 3px #6b778d;
+}
+
+.landing-block {
+  margin-top: 15px;
+}
+
+#login-form {
+  position: relative;
+  display: inline-block;
+
+  .top-image {
+    width: 900px;
+    height:550px;
+    opacity: 0.8;
+    object-fit: cover;
+    filter: brightness(80%);
+  }
+
+  .form {
+    position: absolute;
+    top: 5%;
+    left: 45%;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 30px;
+    text-align: right;
+
+    label {
+      font-size: 15px;
+      color: #FFF;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 400px;
+      height: 37px;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      font-size: 12px;
+      border-radius: 3px;
+      color: #2E2F30;
+      background-color: #FFF;
+      padding: 1px 7px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #CCC;
+    }
+  }
+
+  .form-block { margin: 15px 0; }
+
+  .signup {
+    position: absolute;
+    top: 50%;
+    right: 7%;
+    width: 100px;
+    font-size: 13px;
+    background-color: #ff6768;
+    border-radius: 3px;
+    border: 1px solid #FFF;
+    padding: 2px;
+    text-align: center;
+
+    .button-name a {
+      color: #FFF;
+      text-decoration: none;
+    }
+  }
+
+  .signup:hover {
+    background-color: #ff5657;
+  }
+
+
+}

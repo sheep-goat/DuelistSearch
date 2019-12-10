@@ -1,15 +1,22 @@
-<%= form_with scope: :session, url: login_path do |form| %>
-  <div class="email">
-    <%= form.label :email, "メールアドレス" %>
-    <%= form.text_field :email %>
+<div id="login">
+  <div class="service-title">
+    <h2 class="login-page">Duelist Search</h2>
   </div>
+  <div class="login-form">
+    <%= form_with scope: :session, url: login_path do |form| %>
+      <div class="email form-block">
+        <%= form.label :email, "メールアドレス" %>
+        <%= form.text_field :email, placeholder: 'メールアドレス' %>
+      </div>
 
-  <div class="password">
-    <%= form.label :password, "パスワード" %>
-    <%= form.password_field :password %>
-  </div>
+      <div class="password form-block">
+        <%= form.label :password, "パスワード" %>
+        <%= form.password_field :password, placeholder: 'パスワード' %>
+      </div>
 
-  <div class="buttom">
-    <%= form.submit "ログイン"%>
+      <div class="button form-block">
+        <%= form.submit "ログイン"%>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>

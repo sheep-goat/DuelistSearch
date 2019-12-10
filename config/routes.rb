@@ -20,9 +20,11 @@ Rails.application.routes.draw do
 
   post '/:username/posts/:id/join', to: 'participators#join', as: 'join'
   delete '/:username/posts/:id/join', to: 'participators#leave', as: 'leave'
-  get 'assess/:id', to: 'assessments#new', as: 'assess'
-  post 'assess/:id', to: 'assessments#create', as: 'assess_create'
+  #get 'assess/:id', to: 'assessments#new', as: 'assess'
+  #get 'assessment/:id', to: 'assessments#index'
+  #post 'assess/:id', to: 'assessments#create', as: 'assess_create'
 
   resources :relationships, only: [:create, :destroy]
+  resources :assessments
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

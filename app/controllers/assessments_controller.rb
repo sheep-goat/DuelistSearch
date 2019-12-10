@@ -17,6 +17,12 @@ class AssessmentsController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find(params[:id])
+    @assessment = @user.assessments
+    @grade_count = @assessment.count_grade
+  end
+
   private
 
   def assessment_param

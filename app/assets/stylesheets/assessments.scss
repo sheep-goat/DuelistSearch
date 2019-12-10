@@ -56,3 +56,22 @@
     color: #303030;
   }
 }
+
+#assessment-index .index-inner { display: flex; }
+
+#assessments-list .list-item {
+  .grade {
+    color: #303030;
+    .grade-icon { padding: 0 10px; }
+    .grade-string { font-weight: bold; }
+  }
+  .comment {
+    color: #505050;
+    font-size: 15px;
+    padding: 0 20px;
+  }
+  .no-assessment {
+    color: #505050;
+    padding: 30px;
+  }
+}
