@@ -28,7 +28,7 @@ gem 'bcrypt', '~> 3.1.7'
 # Set default record
 gem 'seed-fu'
 # Use to pagination
-gem 'kaminari', '~> 0.17.0'
+gem 'kaminari', '~> 1.2.1'
 gem 'nokogiri', ">= 1.10.3"
 
 # Japanese localization
